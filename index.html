@@ -403,6 +403,29 @@
         </div>
     </section>
 
+    
+
+    <!-- COLLECTION -->
+    <section id="collection" class="py-16 sm:py-20 lg:py-24 bg-brand-ivory text-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14 lg:mb-16 space-y-3 md:space-y-0 reveal">
+                <div>
+                    <span class="text-brand-terracotta text-[11px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.25em] font-semibold">The Storefront</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl lg:text-5xl font-light text-brand-dark mt-1">The MAKHANAM Collection</h2>
+                </div>
+                <div class="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-brand-earth/80">
+                    <span>SHOWING 6 HERITAGE EDITIONS</span>
+                </div>
+            </div>
+
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
+                <!-- Products injected via JavaScript -->
+            </div>
+
+        </div>
+    </section>
+
     <!-- ORIGINS & WETLAND -->
     <section id="origin" class="py-16 sm:py-20 lg:py-24 bg-brand-ivory text-brand-dark relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -536,7 +559,7 @@
                 </div>
 
                 <div class="lg:col-span-7 relative flex items-center justify-center p-4 sm:p-6 lg:p-10 bg-brand-dark rounded-3xl overflow-hidden shadow-2xl border border-brand-gold/30 reveal">
-                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&q=80&w=1000" alt="Madhubani Traditional Lotus Artwork" class="w-full h-[320px] sm:h-[400px] lg:h-[480px] object-cover opacity-60 rounded-2xl">
+                    <img src="WhatsApp Image 2026-09-24 at 8.30.27 AM.jpeg" alt="Madhubani Traditional Lotus Artwork" class="w-full h-[320px] sm:h-[400px] lg:h-[480px] object-cover opacity-60 rounded-2xl">
                     <div class="absolute inset-0 bg-brand-dark/40"></div>
 
                     <button onclick="showHotspot('lotus')" class="absolute top-[28%] left-[32%] group focus:outline-none">
@@ -568,98 +591,7 @@
         </div>
     </section>
 
-    <!-- ARTISANAL FLAVORS -->
-    <section id="flavors" class="py-16 sm:py-20 lg:py-24 bg-brand-dark text-brand-cream relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4 reveal">
-                <span class="text-brand-gold text-[11px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.25em] font-semibold">Gourmet Cask Series</span>
-                <h2 class="font-serif text-2xl sm:text-3xl lg:text-5xl font-light">Artisanal Flavor Profiles</h2>
-                <p class="text-brand-cream/70 text-sm sm:text-base font-light">Small-batch wood-fired popping paired with single-origin spices, organic Himalayan mineral salts, and organic jaggery.</p>
-            </div>
-
-            <div class="flex items-center justify-start lg:justify-center flex-nowrap lg:flex-wrap gap-2.5 sm:gap-3 mb-8 sm:mb-10 lg:mb-12 overflow-x-auto no-scrollbar -mx-4 px-4 lg:mx-0 lg:px-0 pb-2">
-                <button onclick="selectFlavor('truffle')" id="flavor-pill-truffle" class="flavor-pill shrink-0 px-5 sm:px-6 py-2.5 rounded-full border border-brand-gold bg-brand-gold text-brand-dark font-sans text-[11px] sm:text-xs uppercase tracking-wider font-bold transition-all">Black Truffle & Gold</button>
-                <button onclick="selectFlavor('salt')" id="flavor-pill-salt" class="flavor-pill shrink-0 px-5 sm:px-6 py-2.5 rounded-full border border-brand-gold/30 text-brand-cream/80 hover:border-brand-gold font-sans text-[11px] sm:text-xs uppercase tracking-wider font-medium transition-all">Himalayan Pink Salt</button>
-                <button onclick="selectFlavor('chili')" id="flavor-pill-chili" class="flavor-pill shrink-0 px-5 sm:px-6 py-2.5 rounded-full border border-brand-gold/30 text-brand-cream/80 hover:border-brand-gold font-sans text-[11px] sm:text-xs uppercase tracking-wider font-medium transition-all">Smoked Chili & Jaggery</button>
-                <button onclick="selectFlavor('pudina')" id="flavor-pill-pudina" class="flavor-pill shrink-0 px-5 sm:px-6 py-2.5 rounded-full border border-brand-gold/30 text-brand-cream/80 hover:border-brand-gold font-sans text-[11px] sm:text-xs uppercase tracking-wider font-medium transition-all">Pudina & Sun-Dried Lime</button>
-                <button onclick="selectFlavor('raw')" id="flavor-pill-raw" class="flavor-pill shrink-0 px-5 sm:px-6 py-2.5 rounded-full border border-brand-gold/30 text-brand-cream/80 hover:border-brand-gold font-sans text-[11px] sm:text-xs uppercase tracking-wider font-medium transition-all">Raw Organic Reserve</button>
-            </div>
-
-            <div class="glass-dark rounded-3xl p-6 sm:p-8 lg:p-12 border border-brand-gold/25 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center reveal">
-
-                <div class="lg:col-span-6 space-y-5 sm:space-y-6 order-2 lg:order-1">
-                    <div class="flex items-center justify-between gap-3">
-                        <span id="flavor-badge" class="px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold text-[9px] sm:text-[10px] font-mono uppercase tracking-widest border border-brand-gold/30">RESERVE BATCH 01</span>
-                        <span id="flavor-price" class="font-serif text-xl sm:text-2xl text-brand-gold font-semibold">₹649</span>
-                    </div>
-
-                    <h3 id="flavor-name" class="font-serif text-2xl sm:text-3xl lg:text-4xl font-light text-brand-ivory">Black Truffle & 24K Edible Gold</h3>
-                    <p id="flavor-description" class="text-brand-cream/80 text-sm sm:text-base leading-relaxed font-light">
-                        Infused with wild Umbrian black truffle oil, delicate Himalayan salt flakes, and finished with shimmering edible 24K gold dust. Designed for fine wine pairings and evening luxury.
-                    </p>
-
-                    <div class="grid grid-cols-3 gap-2.5 sm:gap-4 pt-4 border-t border-brand-gold/15 text-center">
-                        <div class="p-2.5 sm:p-3 rounded-xl bg-brand-dark/60 border border-brand-gold/10">
-                            <span class="block text-[9px] sm:text-[10px] font-mono text-brand-cream/60 uppercase">CRUNCH</span>
-                            <span id="flavor-crunch" class="font-serif text-sm sm:text-lg text-brand-gold">9.8 / 10</span>
-                        </div>
-                        <div class="p-2.5 sm:p-3 rounded-xl bg-brand-dark/60 border border-brand-gold/10">
-                            <span class="block text-[9px] sm:text-[10px] font-mono text-brand-cream/60 uppercase">ROAST</span>
-                            <span id="flavor-roast" class="font-serif text-sm sm:text-lg text-brand-gold">Clay Hearth</span>
-                        </div>
-                        <div class="p-2.5 sm:p-3 rounded-xl bg-brand-dark/60 border border-brand-gold/10">
-                            <span class="block text-[9px] sm:text-[10px] font-mono text-brand-cream/60 uppercase">PAIRING</span>
-                            <span id="flavor-pairing" class="font-serif text-sm sm:text-lg text-brand-gold">Pinot Noir</span>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
-                        <button onclick="addSelectedFlavorToCart()" class="flex-1 px-7 sm:px-8 py-3.5 sm:py-4 rounded-full bg-brand-gold text-brand-dark font-sans text-xs uppercase tracking-[0.2em] font-bold hover:bg-brand-cream transition-all flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-bag-shopping"></i>
-                            <span>Add to Bag</span>
-                        </button>
-                        <button onclick="openQuickViewModal('flavor-active')" class="px-6 py-3.5 sm:py-4 rounded-full border border-brand-gold/40 text-brand-cream hover:bg-brand-gold/10 text-xs uppercase tracking-widest font-semibold transition-all">
-                            Details
-                        </button>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-6 relative flex items-center justify-center order-1 lg:order-2">
-                    <div class="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden shadow-2xl border border-brand-gold/30">
-                        <img id="flavor-image" src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&q=80&w=800" alt="Artisanal Makhana Jar Flavor" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex items-center justify-between text-[10px] sm:text-xs font-mono text-brand-gold gap-2">
-                            <span>150G HERMETIC TIN</span>
-                            <span>GI TAGGED</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- COLLECTION -->
-    <section id="collection" class="py-16 sm:py-20 lg:py-24 bg-brand-ivory text-brand-dark">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14 lg:mb-16 space-y-3 md:space-y-0 reveal">
-                <div>
-                    <span class="text-brand-terracotta text-[11px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.25em] font-semibold">The Storefront</span>
-                    <h2 class="font-serif text-2xl sm:text-3xl lg:text-5xl font-light text-brand-dark mt-1">The MAKHANAM Collection</h2>
-                </div>
-                <div class="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-brand-earth/80">
-                    <span>SHOWING 6 HERITAGE EDITIONS</span>
-                </div>
-            </div>
-
-            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
-                <!-- Products injected via JavaScript -->
-            </div>
-
-        </div>
-    </section>
+    
 
     <!-- REVIEWS -->
     <section id="reviews" class="py-16 sm:py-20 lg:py-24 bg-brand-cream text-brand-dark relative">
@@ -984,7 +916,7 @@
                 name: 'Umbrian Truffle & 24K Gold',
                 badge: 'RESERVE BATCH 01',
                 priceINR: 649,
-                image: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&q=80&w=800',
+                image: 'WhatsApp Image 2026-09-24 at 8.30.27 AM.jpeg',
                 hoverImage: 'https://images.unsplash.com/photo-1528733931641-f06b642a8b98?auto=format&fit=crop&q=80&w=800',
                 desc: 'Slow-roasted over clay hearths with Umbrian black truffle oil and delicate 24K gold leaves.',
                 weight: '150g Hermetic Cask',
@@ -995,7 +927,7 @@
                 name: 'Himalayan Pink Salt & Ghee',
                 badge: 'BESTSELLER',
                 priceINR: 499,
-                image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=800',
+                image: 'https://images.unsplash.com/photo-1750747543829-efe69461c7f7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 hoverImage: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&q=80&w=800',
                 desc: 'Hand-harvested lotus seeds tossed in artisanal A2 Gir cow ghee and ground pink rock minerals.',
                 weight: '150g Hermetic Cask',
@@ -1006,7 +938,7 @@
                 name: 'Smoked Chili & Organic Jaggery',
                 badge: 'HERITAGE SPICE',
                 priceINR: 549,
-                image: 'https://images.unsplash.com/photo-1509358217951-628d39f72740?auto=format&fit=crop&q=80&w=800',
+                image: 'https://pixabay.com/images/download/kumarsu6745-lotus-seed-10089952_1920.jpg',
                 hoverImage: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=800',
                 desc: 'A fiery sweet balance of sun-dried Bihari red chili powder and slow-melted palm jaggery.',
                 weight: '150g Hermetic Cask',
@@ -1017,7 +949,7 @@
                 name: 'Pudina & Sun-Dried Lime',
                 badge: 'SUMMER EDITION',
                 priceINR: 529,
-                image: 'https://images.unsplash.com/photo-1528733931641-f06b642a8b98?auto=format&fit=crop&q=80&w=800',
+                image: 'https://pixabay.com/images/download/farming_everything-fox-nuts-7143179_1920.jpg',
                 hoverImage: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=800',
                 desc: 'Crushed garden mint leaves with tangy sun-dried lime extract and Himalayan black salt.',
                 weight: '150g Hermetic Cask',
@@ -1028,7 +960,7 @@
                 name: 'Mithila Raw Organic Reserve',
                 badge: 'SINGLE-ORIGIN RAW',
                 priceINR: 449,
-                image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=800',
+                image: 'https://pixabay.com/images/download/kumarsu6745-asia-10089951_1920.jpg',
                 hoverImage: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&q=80&w=800',
                 desc: 'Unprocessed, large-grade raw makhana pops for customized home roasting and ayurvedic diets.',
                 weight: '250g Silk Sack',
@@ -1039,7 +971,7 @@
                 name: 'The Royal Mithila Quad Cask',
                 badge: 'GIFT BOX',
                 priceINR: 1899,
-                image: 'https://images.unsplash.com/photo-1528733931641-f06b642a8b98?auto=format&fit=crop&q=80&w=800',
+                image: ' https://pixabay.com/images/download/kumarsu6745-lotus-seed-10089952_1920.jpg ',
                 hoverImage: 'https://images.unsplash.com/photo-1509358217951-628d39f72740?auto=format&fit=crop&q=80&w=800',
                 desc: 'A luxury hand-finished wooden casket featuring Truffle, Pink Salt, Smoked Chili, and Pudina editions.',
                 weight: '4 x 100g Caskets',
