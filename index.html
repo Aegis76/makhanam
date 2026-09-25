@@ -72,9 +72,9 @@
     --brand-terracotta:#C37A58;  /* brighter terracotta — distinct accent */
 
     /* ---- Gold Trio (deep / base / bright) ---- */
-    --brand-gold-deep: #A68740;  /* deep gold — subtle accents, hover states */
+    --brand-gold-deep: #000000;  /* deep gold — subtle accents, hover states */
     --brand-gold:      #C9A961;  /* antique gold — primary accent (brighter) */
-    --brand-gold-bright:#E8CD84; /* bright gold — highlights, shimmer mid-point */
+    --brand-gold-bright:#000000; /* bright gold — highlights, shimmer mid-point */
 
     /* ---- Light Surfaces (warm, clean) ---- */
     --brand-cream:     #F3E9D5;  /* warm makhana cream — section backgrounds */
@@ -236,1323 +236,1647 @@
 </style>
  
 </head>
+
 <body class="bg-brand-ivory text-brand-charcoal font-sans antialiased selection:bg-brand-gold selection:text-brand-dark overflow-x-hidden">
 
     <!-- Announcement Bar -->
-    <div id="announcement-bar" class="bg-brand-dark text-brand-cream border-b border-brand-gold/20 py-2 sm:py-2.5 px-3 sm:px-4 text-[10px] sm:text-xs font-medium tracking-wider sm:tracking-widest text-center uppercase flex items-center justify-between gap-2 z-50 relative">
-        <div class="hidden lg:block text-brand-gold/70 text-[10px] whitespace-nowrap">HARVEST 2026 • SINGLE ORIGIN MITHILA</div>
-        <div class="mx-auto flex items-center gap-1.5 sm:gap-2 min-w-0">
-            <span class="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-brand-gold animate-pulse shrink-0"></span>
-            <span class="truncate sm:whitespace-normal">
-                <span class="hidden sm:inline">COMPLIMENTARY EXPRESS GLOBAL SHIPPING ON ORDERS ABOVE </span>
-                <span class="sm:hidden">FREE SHIPPING OVER </span>
-                <span id="announcement-threshold">₹2,499</span>
-            </span>
+    <div class="bg-brand-dark text-brand-cream border-b border-brand-gold/20 py-2.5 px-3 sm:px-4 text-[10px] sm:text-xs font-medium tracking-wider sm:tracking-widest text-center flex items-center justify-between gap-2 z-50 relative">
+        <div class="hidden lg:block text-brand-gold/70 text-[10px] whitespace-nowrap">Makhanam • BIHAR</div>
+        <div class="mx-auto flex items-center gap-2 min-w-0">
+            <span class="inline-block w-2 h-2 rounded-full bg-brand-gold animate-pulse shrink-0"></span>
+            <span class="truncate sm:whitespace-normal">PREMIUM RAW MAKHANA PROCESSING • WHOLESALE SUPPLY</span>
         </div>
-        <div class="hidden md:flex items-center gap-4 text-brand-cream/80 text-[11px] font-mono whitespace-nowrap">
-            <span>CURRENCY:</span>
-            <select id="currency-select" onchange="switchCurrency(this.value)" class="bg-transparent text-brand-gold focus:outline-none cursor-pointer border-b border-brand-gold/40">
-                <option value="INR" class="bg-brand-dark text-brand-cream">INR (₹)</option>
-                <option value="USD" class="bg-brand-dark text-brand-cream">USD ($)</option>
-                <option value="EUR" class="bg-brand-dark text-brand-cream">EUR (€)</option>
-                <option value="GBP" class="bg-brand-dark text-brand-cream">GBP (£)</option>
-            </select>
+        <div class="hidden md:flex items-center gap-2 text-brand-cream/80 text-[10px] font-mono whitespace-nowrap">
+            <span>GSTIN:</span><span class="text-brand-gold">10ELYPK4010H1Z9</span>
         </div>
     </div>
 
-    <!-- Main Navigation Bar -->
+    <!-- Main Navigation -->
     <header class="sticky top-0 z-40 w-full transition-all duration-300 glass-dark text-brand-ivory">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
-
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-3">
             <button onclick="toggleMobileNav()" aria-label="Open Navigation Menu" class="lg:hidden p-2 text-brand-cream hover:text-brand-gold focus:outline-none tap-target flex items-center justify-center">
                 <i class="fa-solid fa-bars-staggered text-lg sm:text-xl"></i>
             </button>
 
             <a href="#" class="flex items-center gap-2 sm:gap-3 group min-w-0">
-                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-brand-gold/40 flex items-center justify-center bg-brand-dark group-hover:border-brand-gold transition-colors shrink-0">
-                    <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M12 3C8 3 4 7 4 12c0 5 4 9 8 9s8-4 8-9c0-5-4-9-8-9z" />
-                        <path d="M12 7c-2.5 0-5 2.5-5 5s2.5 5 5 5 5-2.5 5-5-2.5-5-5-5z" />
-                        <circle cx="12" cy="12" r="2" fill="currentColor"/>
-                    </svg>
+                <div class="w-9 h-9 rounded-full border border-brand-gold/40 flex items-center justify-center bg-brand-dark group-hover:border-brand-gold transition-colors shrink-0">
+                    <span class="text-brand-gold text-xs font-serif font-bold">GA</span>
                 </div>
                 <div class="flex flex-col min-w-0">
-                    <span class="font-serif text-xl sm:text-2xl lg:text-3xl tracking-[0.18em] sm:tracking-[0.2em] font-light text-brand-cream uppercase group-hover:text-brand-gold transition-colors truncate">MAKHANAM</span>
-                    <span class="text-[8px] sm:text-[9px] tracking-[0.28em] sm:tracking-[0.3em] text-brand-gold uppercase font-sans font-semibold -mt-1 hidden xs:block">Mithila Heritage</span>
+                    <span class="font-serif text-xl sm:text-2xl lg:text-3xl tracking-[0.12em] sm:tracking-[0.16em] font-light text-brand-cream uppercase group-hover:text-brand-gold transition-colors">Makhanam</span>
+                    <span class="text-[8px] sm:text-[9px] tracking-[0.24em] text-brand-gold uppercase font-sans font-semibold -mt-1">Premium Raw Makhana</span>
                 </div>
             </a>
 
-            <nav class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-[0.2em] font-medium text-brand-cream/90">
-                <a href="#origin" class="hover:text-brand-gold transition-colors">Origins & Wetland</a>
-                <a href="#journey" class="hover:text-brand-gold transition-colors">7-Stage Process</a>
-                <a href="SizeCaliperGuide.html" class="hover:text-brand-gold transition-colors">SizeCaliperGuide</a>
-                <a href="#collection" class="hover:text-brand-gold transition-colors">Collection</a>
-                <a href="#reviews" class="hover:text-brand-gold transition-colors">Voices</a>
-                <a href="#reels" class="hover:text-brand-gold transition-colors">Stories</a>
+            <nav class="hidden lg:flex items-center space-x-7 text-xs uppercase tracking-[0.16em] font-medium text-brand-cream/90">
+                <a href="#about" class="hover:text-brand-gold transition-colors">About Us</a>
+                <a href="#services" class="hover:text-brand-gold transition-colors">Our Services</a>
+                <a href="#partner" class="hover:text-brand-gold transition-colors">Why Partner</a>
+                <a href="#grading" class="hover:text-brand-gold transition-colors">Grading</a>
+                <a href="#contact" class="hover:text-brand-gold transition-colors">Contact</a>
             </nav>
 
-            <div class="flex items-center space-x-1.5 sm:space-x-3 lg:space-x-5">
-                <button onclick="toggleAudioSoundscape()" id="audio-toggle-btn" title="Toggle Lotus Pond Soundscape" class="p-2 sm:px-3 sm:py-1.5 rounded-full border border-brand-gold/30 hover:border-brand-gold text-brand-gold text-xs flex items-center gap-2 transition-all bg-brand-dark/50 tap-target">
-                    <i id="audio-icon" class="fa-solid fa-volume-xmark"></i>
-                    <span class="hidden md:inline font-mono text-[10px] uppercase tracking-wider" id="audio-label">Pond Audio</span>
-                </button>
-
-                <button onclick="toggleCartDrawer()" class="relative p-2 sm:p-2.5 text-brand-cream hover:text-brand-gold transition-colors flex items-center gap-1.5 sm:gap-2 tap-target">
-                    <i class="fa-solid fa-bag-shopping text-base sm:text-lg"></i>
-                    <span class="hidden sm:inline text-xs uppercase tracking-widest font-semibold">Bag</span>
-                    <span id="cart-counter" class="w-5 h-5 rounded-full bg-brand-gold text-brand-dark font-mono text-[11px] font-bold flex items-center justify-center">0</span>
-                </button>
-            </div>
+            <a href="tel:+918292176088" class="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full border border-brand-gold/30 text-brand-gold text-[10px] uppercase tracking-widest hover:border-brand-gold hover:bg-brand-gold/10 transition-all">
+                <i class="fa-solid fa-phone"></i><span>Contact Us</span>
+            </a>
         </div>
     </header>
 
-    <!-- Mobile Slide-over Drawer -->
+    <!-- Mobile Navigation -->
     <div id="mobile-nav-drawer" class="fixed inset-0 z-50 pointer-events-none transition-opacity duration-300 opacity-0">
-        <div id="mobile-backdrop" class="absolute inset-0 bg-brand-dark/85 backdrop-blur-md" onclick="toggleMobileNav()"></div>
-        <div id="mobile-menu-content" class="absolute top-0 left-0 bottom-0 w-[86%] max-w-sm bg-brand-dark text-brand-cream border-r border-brand-gold/20 p-6 sm:p-8 flex flex-col justify-between transform -translate-x-full transition-transform duration-300 ease-out drawer-slide pointer-events-auto overflow-y-auto">
+        <div class="absolute inset-0 bg-brand-dark/85 backdrop-blur-md" onclick="toggleMobileNav()"></div>
+        <div id="mobile-menu-content" class="absolute top-0 left-0 bottom-0 w-[86%] max-w-sm bg-brand-dark text-brand-cream border-r border-brand-gold/20 p-6 sm:p-8 flex flex-col justify-between transform -translate-x-full transition-transform duration-300 ease-out drawer-slide pointer-events-auto">
             <div>
                 <div class="flex items-center justify-between mb-8 pb-4 border-b border-brand-gold/20">
-                    <span class="font-serif text-2xl tracking-widest text-brand-cream">MAKHANAM</span>
+                    <span class="font-serif text-2xl tracking-widest text-brand-cream">Makhanam</span>
                     <button onclick="toggleMobileNav()" class="text-brand-gold text-xl p-2 tap-target"><i class="fa-solid fa-xmark"></i></button>
                 </div>
-                <nav class="flex flex-col space-y-5 text-sm uppercase tracking-[0.18em] font-medium">
-                    <a href="#origin" onclick="toggleMobileNav()" class="hover:text-brand-gold transition-colors">Origins & Wetland</a>
-                    <a href="#journey" onclick="toggleMobileNav()" class="hover:text-brand-gold transition-colors">7-Stage Lotus Process</a>
-                    <a href="SizeCaliperGuide.html" onclick="toggleMobileNav()" class="hover:text-brand-gold transition-colors">SizeCaliperGuide</a>
-                    <a href="#collection" onclick="toggleMobileNav()" class="hover:text-brand-gold transition-colors">Luxury Collection</a>
-                    <a href="#reviews" onclick="toggleMobileNav()" class="hover:text-brand-gold transition-colors">Voices of MAKHANAM</a>
-                    <a href="#reels" onclick="toggleMobileNav()" class="hover:text-brand-gold transition-colors">Visual Stories</a>
+                <nav class="flex flex-col space-y-5 text-sm uppercase tracking-[0.16em] font-medium">
+                    <a href="#about" onclick="toggleMobileNav()" class="hover:text-brand-gold transition-colors">About Us</a>
+                    <a href="#services" onclick="toggleMobileNav()" class="hover:text-brand-gold transition-colors">Our Services</a>
+                    <a href="#partner" onclick="toggleMobileNav()" class="hover:text-brand-gold transition-colors">Why Partner</a>
+                    <a href="#grading" onclick="toggleMobileNav()" class="hover:text-brand-gold transition-colors">Premium Grading</a>
+                    <a href="#contact" onclick="toggleMobileNav()" class="hover:text-brand-gold transition-colors">Contact Us</a>
                 </nav>
             </div>
-            <div class="pt-6 border-t border-brand-gold/20 space-y-4">
-                <div class="flex items-center justify-between text-xs font-mono text-brand-gold gap-2">
-                    <span>PREFERRED CURRENCY</span>
-                    <select onchange="switchCurrency(this.value)" class="bg-brand-dark border border-brand-gold/40 px-2 py-1.5 rounded text-brand-cream focus:outline-none">
-                        <option value="INR">INR (₹)</option>
-                        <option value="USD">USD ($)</option>
-                        <option value="EUR">EUR (€)</option>
-                        <option value="GBP">GBP (£)</option>
-                    </select>
-                </div>
-                <p class="text-[11px] text-brand-cream/60 leading-relaxed font-serif italic">"Hand-harvested from Mithila's divine lotus ponds, wood-fire roasted by lineage artisans."</p>
+            <div class="pt-6 border-t border-brand-gold/20 space-y-3">
+                <p class="text-[10px] font-mono uppercase tracking-widest text-brand-gold">GSTIN</p>
+                <p class="text-sm text-brand-cream/80">10ELYPK4010H1Z9</p>
+                <a data-whatsapp href="#" class="inline-flex items-center gap-2 text-xs text-brand-gold hover:text-brand-gold-bright" aria-label="WhatsApp bulk enquiry">
+                     <i class="fa-brands fa-whatsapp"></i><span>WhatsApp Bulk Enquiry</span>
+                 </a>
             </div>
         </div>
     </div>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <section class="relative min-h-[88vh] sm:min-h-[92vh] lg:min-h-screen flex items-center justify-center overflow-hidden bg-brand-dark text-brand-cream">
-        <video
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-            poster="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&q=80&w=1600"
-            class="hero-video absolute inset-0 w-full h-full object-cover z-0 opacity-55"
-        >
+        <video autoplay muted loop playsinline preload="metadata"
+            poster="https://images.pexels.com/photos/29246691/pexels-photo-29246691.jpeg"
+            class="hero-video absolute inset-0 w-full h-full object-cover z-0 opacity-50">
             <source src="https://v.ftcdn.net/14/44/34/59/700_F_1444345994_hBeCZN91ZLN75zjrc13fdb9jGY3f7R92_ST.mp4" type="video/mp4">
-            Your browser does not support HTML5 background video.
         </video>
-
         <div class="hero-overlay absolute inset-0 z-10"></div>
         <div class="hero-vignette absolute inset-0 z-10"></div>
 
         <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16 sm:py-20 lg:py-28 flex flex-col items-center">
-
-            <div class="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 rounded-full border border-brand-gold/30 bg-brand-dark/60 backdrop-blur-md mb-5 sm:mb-6 text-brand-gold text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.25em] uppercase font-semibold">
+            <div class="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 rounded-full border border-brand-gold/30 bg-brand-dark/60 backdrop-blur-md mb-5 sm:mb-6 text-brand-gold text-[10px] sm:text-xs tracking-[0.2em] uppercase font-semibold">
                 <span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse"></span>
-                <span>GI Tagged • Single Origin Mithila</span>
+                <span>DARBHANGA, BIHAR • RAW MAKHANA SPECIALIST</span>
             </div>
 
-            <h1 class="font-serif text-[clamp(2rem,7vw,4.5rem)] font-light leading-[1.12] tracking-tight text-brand-ivory mb-5 sm:mb-6 max-w-4xl">
-                FROM THE SACRED WATERS OF <span class="italic font-normal text-gold-gradient">BIHAR</span>
+            <h1 class="font-serif text-[clamp(2.2rem,7vw,5.4rem)] font-light leading-[1.05] tracking-tight text-brand-ivory mb-5 sm:mb-6 max-w-5xl">
+                PREMIUM RAW <span class="italic font-normal text-gold-gradient">MAKHANA</span>
+                <br>FOR WHOLESALERS
             </h1>
 
             <p class="max-w-2xl font-sans text-sm sm:text-base lg:text-lg text-brand-cream/80 font-light leading-relaxed tracking-wide mb-8 sm:mb-10 px-2">
-                Popped by lineage artisans over wood-fired clay hearths. Hand-picked lotus seeds from Darbhanga's deep wetlands, elevated with rare organic botanicals.
+                Makhanam is a dedicated specialist in premium raw Makhana (Foxnut) processing. We combine farming expertise with modern technology and manage the process from sourcing to final raw-material dispatch.
             </p>
 
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-6 w-full sm:w-auto max-w-sm sm:max-w-none">
-                <a href="#collection" class="w-full sm:w-auto px-7 sm:px-8 py-3.5 sm:py-4 rounded-full btn-shimmer text-brand-dark font-sans text-xs tracking-[0.2em] font-bold uppercase transition-all transform hover:-translate-y-0.5 shadow-lg shadow-brand-gold/15 text-center">
-                    Explore Collection
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5 w-full sm:w-auto max-w-sm sm:max-w-none">
+                <a href="#services" class="w-full sm:w-auto px-7 sm:px-8 py-3.5 sm:py-4 rounded-full btn-shimmer text-brand-dark text-xs tracking-[0.2em] font-bold uppercase transition-all text-center">
+                    Explore Our Services
                 </a>
-                <a href="#journey" class="w-full sm:w-auto px-7 sm:px-8 py-3.5 sm:py-4 rounded-full border border-brand-gold/40 text-brand-cream font-sans text-xs tracking-[0.2em] font-medium uppercase hover:border-brand-gold hover:bg-brand-gold/10 transition-all text-center flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-play text-[10px] text-brand-gold"></i>
-                    <span>The 7-Stage Process</span>
+                <a href="#contact" class="w-full sm:w-auto px-7 sm:px-8 py-3.5 sm:py-4 rounded-full border border-brand-gold/40 text-brand-cream text-xs tracking-[0.2em] font-medium uppercase hover:border-brand-gold hover:bg-brand-gold/10 transition-all text-center">
+                    Talk to Makhanam
                 </a>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-8 lg:gap-10 mt-12 sm:mt-16 pt-8 sm:pt-10 border-t border-brand-gold/20 w-full max-w-3xl text-center">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-8 lg:gap-10 mt-12 sm:mt-16 pt-8 sm:pt-10 border-t border-brand-gold/20 w-full max-w-4xl text-center">
                 <div>
-                    <div class="font-serif text-xl sm:text-2xl lg:text-3xl text-brand-gold font-light">100%</div>
-                    <div class="text-[9px] sm:text-[10px] lg:text-xs tracking-widest text-brand-cream/70 uppercase font-medium mt-1">Hand-Harvested</div>
+                    <div class="font-serif text-xl sm:text-2xl lg:text-3xl text-brand-gold font-light">Raw</div>
+                    <div class="text-[9px] sm:text-[10px] lg:text-xs tracking-widest text-brand-cream/70 uppercase font-medium mt-1">Makhana Specialist</div>
                 </div>
                 <div>
-                    <div class="font-serif text-xl sm:text-2xl lg:text-3xl text-brand-gold font-light">Zero</div>
-                    <div class="text-[9px] sm:text-[10px] lg:text-xs tracking-widest text-brand-cream/70 uppercase font-medium mt-1">Trans Fat & Oils</div>
+                    <div class="font-serif text-xl sm:text-2xl lg:text-3xl text-brand-gold font-light">Bulk</div>
+                    <div class="text-[9px] sm:text-[10px] lg:text-xs tracking-widest text-brand-cream/70 uppercase font-medium mt-1">Wholesale Supply</div>
                 </div>
                 <div>
-                    <div class="font-serif text-xl sm:text-2xl lg:text-3xl text-brand-gold font-light">Mithila</div>
-                    <div class="text-[9px] sm:text-[10px] lg:text-xs tracking-widest text-brand-cream/70 uppercase font-medium mt-1">Geographic Indication</div>
+                    <div class="font-serif text-xl sm:text-2xl lg:text-3xl text-brand-gold font-light">FSSAI</div>
+                    <div class="text-[9px] sm:text-[10px] lg:text-xs tracking-widest text-brand-cream/70 uppercase font-medium mt-1">Recognized Compliance</div>
                 </div>
                 <div>
-                    <div class="font-serif text-xl sm:text-2xl lg:text-3xl text-brand-gold font-light">Estd.</div>
-                    <div class="text-[9px] sm:text-[10px] lg:text-xs tracking-widest text-brand-cream/70 uppercase font-medium mt-1">1928 Lineage</div>
+                    <div class="font-serif text-xl sm:text-2xl lg:text-3xl text-brand-gold font-light">Bihar</div>
+                    <div class="text-[9px] sm:text-[10px] lg:text-xs tracking-widest text-brand-cream/70 uppercase font-medium mt-1">Darbhanga Based</div>
                 </div>
             </div>
         </div>
     </section>
 
-    
+   <section id="about"
+    class="relative min-h-[700px] sm:min-h-[750px] lg:min-h-[850px] overflow-hidden text-brand-dark">
 
-    <!-- COLLECTION -->
-    <section id="collection" class="py-16 sm:py-20 lg:py-24 bg-brand-ivory text-brand-dark">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- FULL BACKGROUND IMAGE -->
+    <div class="absolute inset-0">
+        <img
+            src="Untitled design.png"
+            alt="Premium Makhana processing"
+            class="w-full h-full object-cover"
+        />
+    </div>
 
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14 lg:mb-16 space-y-3 md:space-y-0 reveal">
-                <div>
-                    <span class="text-brand-terracotta text-[11px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.25em] font-semibold">The Storefront</span>
-                    <h2 class="font-serif text-2xl sm:text-3xl lg:text-5xl font-light text-brand-dark mt-1">The MAKHANAM Collection</h2>
-                </div>
-                <div class="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-brand-earth/80">
-                    <span>SHOWING 6 HERITAGE EDITIONS</span>
-                </div>
-            </div>
+    <!-- CONTENT -->
+    <div class="relative z-10 min-h-[700px] sm:min-h-[750px] lg:min-h-[850px] flex items-center">
 
-            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
-                <!-- Products injected via JavaScript -->
-            </div>
+        <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-32">
 
-        </div>
-    </section>
+            <div class="max-w-3xl reveal">
 
-    <!-- ORIGINS & WETLAND -->
-    <section id="origin" class="py-16 sm:py-20 lg:py-24 bg-brand-ivory text-brand-dark relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                <!-- LABEL -->
+                <div class="inline-flex items-center gap-3 text-brand-terracotta text-[11px] sm:text-xs uppercase tracking-[0.25em] font-semibold mb-6">
 
-                <div class="lg:col-span-6 relative reveal">
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
-                        <img src="https://images.pexels.com/photos/29246691/pexels-photo-29246691.jpeg" alt="Bihar Makhana Wetland Lotus Pond" class="w-full h-[320px] sm:h-[400px] lg:h-[480px] object-cover transform group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-brand-dark/10 to-transparent"></div>
-                        <div class="absolute bottom-5 sm:bottom-6 left-5 sm:left-6 right-5 sm:right-6 text-brand-cream">
-                            <span class="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-brand-gold">Darbhanga Wetland Sanctuary</span>
-                            <h3 class="font-serif text-lg sm:text-xl lg:text-2xl font-light mt-1">Deep Mineral Waters of Mithilanchal</h3>
-                        </div>
-                    </div>
-                    <div class="absolute -bottom-6 sm:-bottom-8 -right-3 sm:-right-8 w-40 sm:w-56 lg:w-60 rounded-xl overflow-hidden shadow-2xl border-4 border-brand-ivory hidden sm:block">
-                        <img src="https://images.pexels.com/photos/27385140/pexels-photo-27385140.jpeg     " alt="Raw Harvested Lotus Seed Makhana" class="w-full h-32 sm:h-40 lg:h-44 object-cover">
-                    </div>
+                    <span class="w-10 h-px bg-brand-terracotta"></span>
+
+                    <span>About Us</span>
+
                 </div>
 
-                <div class="lg:col-span-6 space-y-5 sm:space-y-6 reveal">
-                    <div class="inline-flex items-center gap-2 text-brand-terracotta text-[11px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.25em] font-semibold">
-                        <span class="w-6 sm:w-8 h-px bg-brand-terracotta"></span>
-                        <span>Sacred Sanctuary</span>
-                    </div>
+                <!-- HEADING -->
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-light leading-[1.05] text-black">
 
-                    <h2 class="font-serif text-2xl sm:text-3xl lg:text-5xl font-light text-brand-dark leading-tight">
-                        Cultivated in the Quiet Wetlands of <span class="italic text-brand-earth">Mithilanchal</span>
-                    </h2>
+                    A Dedicated Specialist in
 
-                    <p class="text-brand-charcoal/80 text-sm sm:text-base leading-relaxed font-light">
-                        Makhana (Euryale ferox) is not merely cultivated; it is nurtured in Bihar's ancient, mineral-rich floodplains. For over nine months, lotus blossoms float upon pristine waters, absorbing trace minerals and sun energy before sinking into nutrient-dense sediment.
+                    <span class="italic text-brand-earth">
+                        Premium Raw Makhana
+                    </span>
+
+                </h2>
+
+                <!-- DESCRIPTION -->
+                <div class="mt-7 sm:mt-8 space-y-5 max-w-2xl">
+
+                    <p class="text-black text-sm sm:text-base lg:text-lg leading-relaxed font-light">
+                        Makhanam, based in Bihar, is a dedicated specialist in premium raw Makhana (Foxnut) processing. We combine farming expertise with modern technology. Our work is focused entirely on this segment.
                     </p>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 pt-4 border-t border-brand-earth/15 font-sans">
-                        <div class="space-y-1">
-                            <div class="font-serif text-lg sm:text-xl text-brand-dark">Natural Mineral Balance</div>
-                            <p class="text-xs text-brand-charcoal/70 leading-normal">Rich in magnesium, potassium, and rare plant-based antioxidants.</p>
+                 
+
+                </div>
+
+                <!-- INFORMATION -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-12 mt-10 pt-6 border-t border-black/20 max-w-2xl">
+
+                    <div>
+                        <div class="text-[10px] uppercase tracking-[0.2em] text-brand-terracotta font-semibold mb-2">
+                            Location
                         </div>
-                        <div class="space-y-1">
-                            <div class="font-serif text-lg sm:text-xl text-brand-dark">Ethical Aquatic Farming</div>
-                            <p class="text-xs text-brand-charcoal/70 leading-normal">Supporting over 40,000 native Mallah fishing families in Bihar.</p>
+
+                        <div class="font-serif text-xl sm:text-2xl text-black">
+                          Bihar
                         </div>
                     </div>
 
-                    <div class="pt-2">
-                        <a href="#journey" class="inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-bold text-brand-dark hover:text-brand-terracotta transition-colors group">
-                            <span>Discover the Harvest Ritual</span>
-                            <i class="fa-solid fa-arrow-right-long group-hover:translate-x-1 transition-transform"></i>
+                    <div>
+                        <div class="text-[10px] uppercase tracking-[0.2em] text-brand-terracotta font-semibold mb-2">
+                            GSTIN
+                        </div>
+
+                        <div class="font-mono text-xs sm:text-sm text-black">
+                            10ELYPK4010H1Z9
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- OUR SERVICES -->
+ <!-- ============================================
+     7-STAGE MAKHANA JOURNEY
+     From Bihar's Wetlands to Phool Makhana
+============================================= -->
+
+<section id="journey" class="py-16 sm:py-20 lg:py-24 bg-brand-dark text-brand-cream relative">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- SECTION INTRO -->
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4 reveal">
+
+            <span class="text-brand-gold text-[11px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.25em] font-semibold">
+                From Water to Wonder
+            </span>
+
+            <h2 class="font-serif text-2xl sm:text-3xl lg:text-5xl font-light tracking-tight">
+                The 7-Stage Makhana Journey
+            </h2>
+
+            <p class="text-brand-cream/70 text-sm sm:text-base font-light leading-relaxed">
+                From the quiet wetlands of Bihar to the delicate white bloom in your bowl,
+                every Makhana passes through a patient journey shaped by water, season,
+                skilled hands and generations of farming knowledge.
+            </p>
+
+        </div>
+
+
+        <!-- JOURNEY NAVIGATION -->
+
+        <div class="-mx-4 sm:mx-0 px-4 sm:px-0 flex items-center justify-start lg:justify-center
+                    space-x-2 sm:space-x-3 lg:space-x-4 overflow-x-auto pb-4 no-scrollbar
+                    border-b border-brand-gold/20 mb-8 sm:mb-10 lg:mb-12">
+
+            <button
+                onclick="setJourneyStep(1)"
+                id="step-btn-1"
+                class="journey-step-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-t-xl
+                       font-mono text-[10px] sm:text-xs tracking-wider uppercase
+                       transition-all whitespace-nowrap bg-brand-gold text-brand-dark font-bold">
+                01. Wetland
+            </button>
+
+            <button
+                onclick="setJourneyStep(2)"
+                id="step-btn-2"
+                class="journey-step-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-t-xl
+                       font-mono text-[10px] sm:text-xs tracking-wider uppercase
+                       transition-all whitespace-nowrap text-brand-cream/60 hover:text-brand-gold">
+                02. Sowing
+            </button>
+
+            <button
+                onclick="setJourneyStep(3)"
+                id="step-btn-3"
+                class="journey-step-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-t-xl
+                       font-mono text-[10px] sm:text-xs tracking-wider uppercase
+                       transition-all whitespace-nowrap text-brand-cream/60 hover:text-brand-gold">
+                03. Growth
+            </button>
+
+            <button
+                onclick="setJourneyStep(4)"
+                id="step-btn-4"
+                class="journey-step-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-t-xl
+                       font-mono text-[10px] sm:text-xs tracking-wider uppercase
+                       transition-all whitespace-nowrap text-brand-cream/60 hover:text-brand-gold">
+                04. Transplant
+            </button>
+
+            <button
+                onclick="setJourneyStep(5)"
+                id="step-btn-5"
+                class="journey-step-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-t-xl
+                       font-mono text-[10px] sm:text-xs tracking-wider uppercase
+                       transition-all whitespace-nowrap text-brand-cream/60 hover:text-brand-gold">
+                05. Flower
+            </button>
+
+            <button
+                onclick="setJourneyStep(6)"
+                id="step-btn-6"
+                class="journey-step-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-t-xl
+                       font-mono text-[10px] sm:text-xs tracking-wider uppercase
+                       transition-all whitespace-nowrap text-brand-cream/60 hover:text-brand-gold">
+                06. Harvest
+            </button>
+
+            <button
+                onclick="setJourneyStep(7)"
+                id="step-btn-7"
+                class="journey-step-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-t-xl
+                       font-mono text-[10px] sm:text-xs tracking-wider uppercase
+                       transition-all whitespace-nowrap text-brand-cream/60 hover:text-brand-gold">
+                07. Popping
+            </button>
+
+        </div>
+
+
+        <!-- JOURNEY CONTENT CARD -->
+
+        <div class="glass-dark rounded-2xl p-5 sm:p-8 lg:p-10
+                    border border-brand-gold/20
+                    grid grid-cols-1 lg:grid-cols-12
+                    gap-6 sm:gap-8 items-center reveal">
+
+
+            <!-- TEXT -->
+
+            <div class="lg:col-span-6 space-y-5 sm:space-y-6 order-2 lg:order-1">
+
+                <div class="inline-flex items-center gap-2 font-mono text-[10px] sm:text-xs
+                            text-brand-gold uppercase tracking-widest">
+
+                    <span id="journey-step-num">
+                        STAGE 01 / 07
+                    </span>
+
+                    <span class="w-10 sm:w-12 h-px bg-brand-gold/40"></span>
+
+                </div>
+
+
+                <h3
+                    id="journey-title"
+                    class="font-serif text-xl sm:text-2xl lg:text-4xl
+                           font-light text-brand-cream">
+                    The Living Wetland
+                </h3>
+
+
+                <p
+                    id="journey-desc"
+                    class="text-brand-cream/80 text-sm sm:text-base
+                           leading-relaxed font-light">
+                    Makhana begins its journey in the water bodies of Bihar.
+                    Traditional cultivation takes place in ponds and wetlands
+                    where the crop grows in standing water, rooted in rich
+                    aquatic soil.
+                </p>
+
+
+                <!-- QUOTE / FACT CARD -->
+
+                <div class="p-3.5 sm:p-4 rounded-xl bg-brand-dark/80
+                            border border-brand-gold/15
+                            flex items-start gap-3">
+
+                    <i class="fa-solid fa-leaf text-brand-gold
+                              text-lg sm:text-xl shrink-0"></i>
+
+                    <div>
+
+                        <span
+                            id="journey-quote"
+                            class="text-xs sm:text-sm font-serif italic
+                                   text-brand-cream/90 block">
+                            “Makhana is an aquatic crop, naturally suited to
+                            the ponds and wetlands of Bihar.”
+                        </span>
+
+                        <span
+                            id="journey-source"
+                            class="text-[10px] font-mono text-brand-gold
+                                   uppercase mt-1 block">
+                            — ICAR Makhana Research Centre
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE -->
+
+            <div class="lg:col-span-6 order-1 lg:order-2">
+
+                <div class="relative rounded-xl overflow-hidden
+                            shadow-2xl aspect-[4/3]">
+
+                    <img
+                        id="journey-img"
+                        src="https://i.pinimg.com/1200x/12/a6/e9/12a6e955ec206e79e89fe087d5c56cbf.jpg"
+                        alt="Makhana cultivation in Bihar"
+                        class="w-full h-full object-cover
+                               transition-all duration-500">
+
+                    <div class="absolute inset-0
+                                bg-gradient-to-t
+                                from-brand-dark/60
+                                via-transparent
+                                to-transparent">
+                    </div>
+
+
+                    <!-- LOCATION BADGE -->
+
+                    <div class="absolute top-3 sm:top-4 right-3 sm:right-4
+                                bg-brand-dark/80 backdrop-blur-md
+                                border border-brand-gold/30
+                                px-2.5 sm:px-3 py-1 rounded-full
+                                text-[9px] sm:text-[10px]
+                                font-mono text-brand-gold
+                                uppercase tracking-wider">
+
+                        <span id="journey-badge">
+                            BIHAR WETLANDS
+                        </span>
+
+                    </div>
+
+
+                    <!-- STAGE NUMBER -->
+
+                    <div class="absolute bottom-4 left-4">
+
+                        <span
+                            id="journey-image-stage"
+                            class="font-mono text-xs tracking-[0.2em]
+                                   text-brand-cream/80 uppercase">
+                            STAGE 01
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- WHY PARTNER -->
+    <section id="partner" class="py-16 sm:py-20 lg:py-24 bg-brand-cream text-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                <div class="lg:col-span-5 reveal">
+                    <span class="text-brand-terracotta text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold">Why Partner with Makhanam?</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-light leading-tight mt-3">
+                        Built Around <span class="italic text-brand-earth">Wholesale Requirements</span>
+                    </h2>
+                    <p class="text-brand-charcoal/80 text-sm sm:text-base leading-relaxed font-light mt-5">
+                        Makhanam supports wholesalers, exporters and white labelers with reliable raw Makhana supply, grading and packaging options tailored to distribution requirements.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 reveal">
+                    <div class="bg-brand-ivory rounded-2xl p-6 sm:p-7 border border-brand-earth/15 shadow-sm">
+                        <div class="w-11 h-11 rounded-full bg-brand-dark text-brand-gold flex items-center justify-center mb-5">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl text-brand-dark">Our Clients</h3>
+                        <p class="text-sm text-brand-charcoal/75 leading-relaxed mt-3">
+                            Our client portfolio includes well-known brands such as “Big Basket” among various exporters and white labelers.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-ivory rounded-2xl p-6 sm:p-7 border border-brand-earth/15 shadow-sm">
+                        <div class="w-11 h-11 rounded-full bg-brand-dark text-brand-gold flex items-center justify-center mb-5">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl text-brand-dark">Our Products</h3>
+                        <p class="text-sm text-brand-charcoal/75 leading-relaxed mt-3">
+                            We accommodate all wholesale needs, offering reliable bulk supply in large-capacity gunny bags and custom, smaller packaging options tailored precisely to retail or distribution requirements.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-dark rounded-2xl p-6 sm:p-7 text-brand-cream border border-brand-gold/20 md:col-span-2">
+                        <div class="flex flex-col sm:flex-row gap-5 sm:gap-7 items-start">
+                            <div class="w-11 h-11 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-2xl">Compliance & Certifications</h3>
+                                <p class="text-sm text-brand-cream/75 leading-relaxed mt-3 max-w-3xl">
+                                    We maintain comprehensive compliance measures & industry-recognized certifications like FSSAI that ensure product quality & trust for customers PAN India.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GRADING SPECIFICATIONS -->
+    <section id="grading" class="py-16 sm:py-20 lg:py-24 bg-brand-ivory text-brand-dark relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14 reveal">
+                <span class="text-brand-terracotta text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold">Premium Makhana</span>
+                <h2 class="font-serif text-2xl sm:text-3xl lg:text-5xl font-light mt-2">Our Premium Makhana Grading Specifications</h2>
+                <p class="text-brand-charcoal/65 text-sm mt-4">Premium grading categories and size ranges as presented in the Makhanam catalogue.</p>
+            </div>
+
+            <div id="grading-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+                <!-- Grading cards injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- WHOLESALE / CONTACT -->
+    <section id="contact" class="py-16 sm:py-20 lg:py-24 bg-brand-dark text-brand-cream relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+                <div class="lg:col-span-7 reveal">
+                    <span class="text-brand-gold text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold">Wholesale Enquiries</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-6xl font-light leading-tight mt-3">
+                        Let’s Build a Reliable <span class="italic text-gold-gradient">Makhana Supply</span>
+                    </h2>
+                    <p class="text-brand-cream/70 text-sm sm:text-base leading-relaxed max-w-2xl mt-5">
+                        Connect with Makhanam for premium raw Makhana, bulk supply, grading requirements and packaging options for retail or distribution.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-5 reveal">
+                    <div class="glass-dark rounded-2xl p-6 sm:p-8 border border-brand-gold/20 space-y-5">
+                        <div>
+                            <div class="text-[10px] uppercase tracking-widest text-brand-gold mb-1">Company</div>
+                            <div class="font-serif text-2xl">Makhanam</div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-location-dot text-brand-gold mt-1"></i>
+                            <div>
+                                <div class="text-[10px] uppercase tracking-widest text-brand-gold">Location</div>
+                                <p class="text-sm text-brand-cream/75">Bihar</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-phone text-brand-gold mt-1"></i>
+                            <div>
+                                <div class="text-[10px] uppercase tracking-widest text-brand-gold">Phone</div>
+                                <a href="tel:+918292176088" class="text-sm text-brand-cream/75 hover:text-brand-gold">+91 8340493639</a>
+                                 <a data-whatsapp href="#" class="inline-flex items-center gap-2 mt-2 text-xs text-brand-gold hover:text-brand-gold-bright" aria-label="WhatsApp bulk enquiry">
+                                     <i class="fa-brands fa-whatsapp"></i>
+                                     <span>WhatsApp for Bulk Enquiry</span>
+                                 </a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-envelope text-brand-gold mt-1"></i>
+                            <div class="min-w-0">
+                                <div class="text-[10px] uppercase tracking-widest text-brand-gold">Email</div>
+                                <a href="mailto:" class="text-sm text-brand-cream/75 hover:text-brand-gold break-all"></a>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-brand-gold/15">
+                            <div class="text-[10px] uppercase tracking-widest text-brand-gold mb-1">GSTIN</div>
+                            <div class="font-mono text-sm">10ELYPK4010H1Z9</div>
+                        </div>
+                        <a href="mailto:greenfieldagro2024@gmail.com?subject=Wholesale%20Makhana%20Enquiry" class="block w-full py-3.5 rounded-full btn-shimmer text-brand-dark text-xs uppercase tracking-[0.2em] font-bold text-center">
+                            Send Wholesale Enquiry
                         </a>
                     </div>
                 </div>
-
             </div>
-        </div>
-    </section>
-
-    <!-- 7-STAGE JOURNEY -->
-    <section id="journey" class="py-16 sm:py-20 lg:py-24 bg-brand-dark text-brand-cream relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4 reveal">
-                <span class="text-brand-gold text-[11px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.25em] font-semibold">Artisanal Craftsmanship</span>
-                <h2 class="font-serif text-2xl sm:text-3xl lg:text-5xl font-light tracking-tight">The 7-Stage Lotus Journey</h2>
-                <p class="text-brand-cream/70 text-sm sm:text-base font-light">From waterbed silt to your private collection, each seed undergoes seven patient transformations masterminded by lineage artisans.</p>
-            </div>
-
-            <div class="-mx-4 sm:mx-0 px-4 sm:px-0 flex items-center justify-start lg:justify-center space-x-2 sm:space-x-3 lg:space-x-4 overflow-x-auto pb-4 no-scrollbar border-b border-brand-gold/20 mb-8 sm:mb-10 lg:mb-12">
-                <button onclick="setJourneyStep(1)" id="step-btn-1" class="journey-step-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-t-xl font-mono text-[10px] sm:text-xs tracking-wider uppercase transition-all whitespace-nowrap bg-brand-gold text-brand-dark font-bold">01. Pond Bed</button>
-                <button onclick="setJourneyStep(2)" id="step-btn-2" class="journey-step-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-t-xl font-mono text-[10px] sm:text-xs tracking-wider uppercase transition-all whitespace-nowrap text-brand-cream/60 hover:text-brand-gold">02. Lotus Bloom</button>
-                <button onclick="setJourneyStep(3)" id="step-btn-3" class="journey-step-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-t-xl font-mono text-[10px] sm:text-xs tracking-wider uppercase transition-all whitespace-nowrap text-brand-cream/60 hover:text-brand-gold">03. Submerged Harvest</button>
-                <button onclick="setJourneyStep(4)" id="step-btn-4" class="journey-step-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-t-xl font-mono text-[10px] sm:text-xs tracking-wider uppercase transition-all whitespace-nowrap text-brand-cream/60 hover:text-brand-gold">04. Solar Drying</button>
-                <button onclick="setJourneyStep(5)" id="step-btn-5" class="journey-step-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-t-xl font-mono text-[10px] sm:text-xs tracking-wider uppercase transition-all whitespace-nowrap text-brand-cream/60 hover:text-brand-gold">05. Clay Popping</button>
-                <button onclick="setJourneyStep(6)" id="step-btn-6" class="journey-step-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-t-xl font-mono text-[10px] sm:text-xs tracking-wider uppercase transition-all whitespace-nowrap text-brand-cream/60 hover:text-brand-gold">06. Botanical Roast</button>
-                <button onclick="setJourneyStep(7)" id="step-btn-7" class="journey-step-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-t-xl font-mono text-[10px] sm:text-xs tracking-wider uppercase transition-all whitespace-nowrap text-brand-cream/60 hover:text-brand-gold">07. Silk Cask</button>
-            </div>
-
-            <div class="glass-dark rounded-2xl p-5 sm:p-8 lg:p-10 border border-brand-gold/20 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center reveal">
-                <div class="lg:col-span-6 space-y-5 sm:space-y-6 order-2 lg:order-1">
-                    <div class="inline-flex items-center gap-2 font-mono text-[10px] sm:text-xs text-brand-gold uppercase tracking-widest">
-                        <span id="journey-step-num">STAGE 01 / 07</span>
-                        <span class="w-10 sm:w-12 h-px bg-brand-gold/40"></span>
-                    </div>
-                    <h3 id="journey-title" class="font-serif text-xl sm:text-2xl lg:text-4xl font-light text-brand-cream">Pond Wetland Cultivation</h3>
-                    <p id="journey-desc" class="text-brand-cream/80 text-sm sm:text-base leading-relaxed font-light">
-                        In early November, organic seeds are sown in natural wetlands (maans). The seeds sink into rich organic silt where they germinate beneath calm, nutrient-packed aquatic layers.
-                    </p>
-                    <div class="p-3.5 sm:p-4 rounded-xl bg-brand-dark/80 border border-brand-gold/15 flex items-start gap-3">
-                        <i class="fa-solid fa-quote-left text-brand-gold text-lg sm:text-xl shrink-0"></i>
-                        <div>
-                            <span class="text-xs sm:text-sm font-serif italic text-brand-cream/90 block" id="journey-quote">"The wetland sediment provides natural iron and magnesium that no controlled greenhouse can ever replicate."</span>
-                            <span class="text-[10px] font-mono text-brand-gold uppercase mt-1 block">— Master Harvest Artisan, Darbhanga</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-6 order-1 lg:order-2">
-                    <div class="relative rounded-xl overflow-hidden shadow-2xl aspect-[4/3]">
-                        <img id="journey-img" src="https://i.pinimg.com/1200x/12/a6/e9/12a6e955ec206e79e89fe087d5c56cbf.jpg" alt="Lotus Journey Stage" class="w-full h-full object-cover transition-all duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent"></div>
-                        <div class="absolute top-3 sm:top-4 right-3 sm:right-4 bg-brand-dark/80 backdrop-blur-md border border-brand-gold/30 px-2.5 sm:px-3 py-1 rounded-full text-[9px] sm:text-[10px] font-mono text-brand-gold uppercase tracking-wider">
-                            <span id="journey-badge">BIHAR WETLANDS</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- MADHUBANI HOTSPOTS -->
-    <section class="py-16 sm:py-20 lg:py-24 bg-brand-cream text-brand-dark relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-
-                <div class="lg:col-span-5 space-y-5 sm:space-y-6 reveal">
-                    <span class="text-brand-terracotta text-[11px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.25em] font-semibold">Art & Tradition</span>
-                    <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-light leading-tight">Tradition, Drawn Differently</h2>
-                    <p class="text-brand-charcoal/80 text-sm sm:text-base leading-relaxed font-light">
-                        Mithila Madhubani art is an ancient line-drawing tradition created by women in Bihar using twigs, nibs, and natural vegetable dyes. Explore the interactive hotspots on our sacred motifs to uncover the symbolism embedded in every box of MAKHANAM.
-                    </p>
-
-                    <div id="hotspot-info-box" class="p-5 sm:p-6 rounded-2xl bg-brand-ivory border border-brand-earth/20 shadow-md space-y-3 transition-all duration-300">
-                        <div class="flex flex-wrap items-center justify-between gap-2">
-                            <span id="hotspot-title" class="font-serif text-lg sm:text-xl font-semibold text-brand-dark">Click Hotspot to Explore Symbolism</span>
-                            <span id="hotspot-tag" class="text-[9px] sm:text-[10px] font-mono uppercase bg-brand-gold/20 text-brand-earth px-2 py-0.5 rounded">MADHUBANI FOLKLORE</span>
-                        </div>
-                        <p id="hotspot-desc" class="text-xs sm:text-sm text-brand-charcoal/80 leading-relaxed font-light">
-                            Tap any pulsing gold emblem on the canvas to inspect Mithila water mythology, fish abundance motifs, and royal court snacking heritage.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-7 relative flex items-center justify-center p-4 sm:p-6 lg:p-10 bg-brand-dark rounded-3xl overflow-hidden shadow-2xl border border-brand-gold/30 reveal">
-                    <img src="WhatsApp Image 2026-09-24 at 8.30.27 AM.jpeg" alt="Madhubani Traditional Lotus Artwork" class="w-full h-[320px] sm:h-[400px] lg:h-[480px] object-cover opacity-60 rounded-2xl">
-                    <div class="absolute inset-0 bg-brand-dark/40"></div>
-
-                    <button onclick="showHotspot('lotus')" class="absolute top-[28%] left-[32%] group focus:outline-none">
-                        <span class="relative flex h-8 w-8 items-center justify-center">
-                            <span class="radar-ring absolute inline-flex h-full w-full rounded-full bg-brand-gold opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-6 w-6 bg-brand-gold text-brand-dark items-center justify-center text-xs font-bold shadow-lg">1</span>
-                        </span>
-                        <span class="hidden sm:block absolute top-10 -left-12 whitespace-nowrap bg-brand-dark/90 text-brand-gold text-[10px] uppercase font-mono px-2 py-1 rounded border border-brand-gold/30 shadow">Lotus Purity</span>
-                    </button>
-
-                    <button onclick="showHotspot('fish')" class="absolute top-[60%] left-[65%] group focus:outline-none">
-                        <span class="relative flex h-8 w-8 items-center justify-center">
-                            <span class="radar-ring absolute inline-flex h-full w-full rounded-full bg-brand-gold opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-6 w-6 bg-brand-gold text-brand-dark items-center justify-center text-xs font-bold shadow-lg">2</span>
-                        </span>
-                        <span class="hidden sm:block absolute top-10 -left-12 whitespace-nowrap bg-brand-dark/90 text-brand-gold text-[10px] uppercase font-mono px-2 py-1 rounded border border-brand-gold/30 shadow">Fish Abundance</span>
-                    </button>
-
-                    <button onclick="showHotspot('fire')" class="absolute top-[40%] right-[20%] group focus:outline-none">
-                        <span class="relative flex h-8 w-8 items-center justify-center">
-                            <span class="radar-ring absolute inline-flex h-full w-full rounded-full bg-brand-gold opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-6 w-6 bg-brand-gold text-brand-dark items-center justify-center text-xs font-bold shadow-lg">3</span>
-                        </span>
-                        <span class="hidden sm:block absolute top-10 -left-12 whitespace-nowrap bg-brand-dark/90 text-brand-gold text-[10px] uppercase font-mono px-2 py-1 rounded border border-brand-gold/30 shadow">Clay Hearth</span>
-                    </button>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    
-
-    <!-- REVIEWS -->
-    <section id="reviews" class="py-16 sm:py-20 lg:py-24 bg-brand-cream text-brand-dark relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 lg:mb-12 space-y-6 md:space-y-0 reveal">
-                <div>
-                    <span class="text-brand-terracotta text-[11px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.25em] font-semibold">Connoisseur Testimonials</span>
-                    <h2 class="font-serif text-2xl sm:text-3xl lg:text-5xl font-light">Voices of MAKHANAM</h2>
-                    <div class="flex flex-wrap items-center gap-2 sm:gap-3 mt-2">
-                        <div class="flex text-brand-gold text-sm">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="font-serif text-base sm:text-lg font-semibold">4.95 / 5.0</span>
-                        <span class="text-[11px] sm:text-xs font-sans text-brand-charcoal/60">(Based on 340+ verified patrons)</span>
-                    </div>
-                </div>
-
-                <button onclick="openReviewModal()" class="px-6 py-3 rounded-full bg-brand-dark text-brand-cream hover:bg-brand-gold hover:text-brand-dark font-sans text-xs uppercase tracking-[0.2em] font-bold transition-all self-start md:self-auto">
-                    Share Your Experience
-                </button>
-            </div>
-
-            <div class="-mx-4 sm:mx-0 px-4 sm:px-0 flex items-center space-x-2.5 sm:space-x-3 overflow-x-auto pb-4 no-scrollbar mb-8 sm:mb-10">
-                <button onclick="filterReviews('all')" id="rev-filter-all" class="rev-filter shrink-0 px-4 py-1.5 rounded-full bg-brand-dark text-brand-cream font-mono text-[11px] sm:text-xs uppercase tracking-wider">All Voices</button>
-                <button onclick="filterReviews('chef')" id="rev-filter-chef" class="rev-filter shrink-0 px-4 py-1.5 rounded-full bg-brand-ivory text-brand-dark hover:bg-brand-dark hover:text-brand-cream font-mono text-[11px] sm:text-xs uppercase tracking-wider">Michelin Chefs</button>
-                <button onclick="filterReviews('collector')" id="rev-filter-collector" class="rev-filter shrink-0 px-4 py-1.5 rounded-full bg-brand-ivory text-brand-dark hover:bg-brand-dark hover:text-brand-cream font-mono text-[11px] sm:text-xs uppercase tracking-wider">Heritage Collectors</button>
-                <button onclick="filterReviews('verified')" id="rev-filter-verified" class="rev-filter shrink-0 px-4 py-1.5 rounded-full bg-brand-ivory text-brand-dark hover:bg-brand-dark hover:text-brand-cream font-mono text-[11px] sm:text-xs uppercase tracking-wider">Verified Buyers</button>
-            </div>
-
-            <div id="reviews-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
-                <!-- Review Cards Injected via JS -->
-            </div>
-
-        </div>
-    </section>
-
-    <!-- REELS -->
-    <section id="reels" class="py-16 sm:py-20 lg:py-24 bg-brand-dark text-brand-cream">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14 lg:mb-16 space-y-3 reveal">
-                <span class="text-brand-gold text-[11px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.25em] font-semibold">@MAKHANAM.HERITAGE</span>
-                <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-light">Visual Chronicles from Bihar</h2>
-                <p class="text-brand-cream/70 text-sm font-light">Short cinematic glances into lotus harvesting, clay fire roasting, and regional culinary pairing.</p>
-            </div>
-
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
-                <div onclick="openReelModal(1)" class="group relative rounded-2xl overflow-hidden aspect-[9/16] bg-brand-charcoal cursor-pointer border border-brand-gold/20 hover:border-brand-gold transition-all">
-                    <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=600" alt="Harvest Reel Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-black/30"></div>
-                    <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-dark/70 backdrop-blur-md flex items-center justify-center text-brand-gold">
-                        <i class="fa-solid fa-play text-[10px] sm:text-xs"></i>
-                    </div>
-                    <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 text-xs font-sans">
-                        <span class="text-[9px] sm:text-[10px] font-mono text-brand-gold block uppercase">HARVEST RITUAL</span>
-                        <p class="font-light text-brand-cream line-clamp-2 mt-0.5 text-[11px] sm:text-xs leading-snug">Diving into 6ft deep Darbhanga lotus ponds before sunrise.</p>
-                        <span class="text-[9px] sm:text-[10px] text-brand-cream/60 mt-1.5 sm:mt-2 block font-mono">14.2K views</span>
-                    </div>
-                </div>
-
-                <div onclick="openReelModal(2)" class="group relative rounded-2xl overflow-hidden aspect-[9/16] bg-brand-charcoal cursor-pointer border border-brand-gold/20 hover:border-brand-gold transition-all">
-                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=600" alt="Clay Fire Popping Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-black/30"></div>
-                    <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-dark/70 backdrop-blur-md flex items-center justify-center text-brand-gold">
-                        <i class="fa-solid fa-play text-[10px] sm:text-xs"></i>
-                    </div>
-                    <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 text-xs font-sans">
-                        <span class="text-[9px] sm:text-[10px] font-mono text-brand-gold block uppercase">WOOD FIRE POPPING</span>
-                        <p class="font-light text-brand-cream line-clamp-2 mt-0.5 text-[11px] sm:text-xs leading-snug">The rhythmic popping sound over traditional clay hearths.</p>
-                        <span class="text-[9px] sm:text-[10px] text-brand-cream/60 mt-1.5 sm:mt-2 block font-mono">28.9K views</span>
-                    </div>
-                </div>
-
-                <div onclick="openReelModal(3)" class="group relative rounded-2xl overflow-hidden aspect-[9/16] bg-brand-charcoal cursor-pointer border border-brand-gold/20 hover:border-brand-gold transition-all">
-                    <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&q=80&w=600" alt="Truffle Dusting Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-black/30"></div>
-                    <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-dark/70 backdrop-blur-md flex items-center justify-center text-brand-gold">
-                        <i class="fa-solid fa-play text-[10px] sm:text-xs"></i>
-                    </div>
-                    <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 text-xs font-sans">
-                        <span class="text-[9px] sm:text-[10px] font-mono text-brand-gold block uppercase">24K GOLD DUSTING</span>
-                        <p class="font-light text-brand-cream line-clamp-2 mt-0.5 text-[11px] sm:text-xs leading-snug">Finishing Umbrian Black Truffle makhana with gold dust.</p>
-                        <span class="text-[9px] sm:text-[10px] text-brand-cream/60 mt-1.5 sm:mt-2 block font-mono">42.1K views</span>
-                    </div>
-                </div>
-
-                <div onclick="openReelModal(4)" class="group relative rounded-2xl overflow-hidden aspect-[9/16] bg-brand-charcoal cursor-pointer border border-brand-gold/20 hover:border-brand-gold transition-all">
-                    <img src="https://images.unsplash.com/photo-1528733931641-f06b642a8b98?auto=format&fit=crop&q=80&w=600" alt="Packaging Reel Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-black/30"></div>
-                    <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-dark/70 backdrop-blur-md flex items-center justify-center text-brand-gold">
-                        <i class="fa-solid fa-play text-[10px] sm:text-xs"></i>
-                    </div>
-                    <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 text-xs font-sans">
-                        <span class="text-[9px] sm:text-[10px] font-mono text-brand-gold block uppercase">SILK TOUCH CASK</span>
-                        <p class="font-light text-brand-cream line-clamp-2 mt-0.5 text-[11px] sm:text-xs leading-snug">Hermetic seal testing for zero humidity degradation.</p>
-                        <span class="text-[9px] sm:text-[10px] text-brand-cream/60 mt-1.5 sm:mt-2 block font-mono">19.5K views</span>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-brand-charcoal text-brand-cream border-t border-brand-gold/20 pt-14 sm:pt-16 lg:pt-20 pb-10 sm:pb-12">
+    <footer class="bg-brand-charcoal text-brand-cream border-t border-brand-gold/20 pt-14 sm:pt-16 pb-10 sm:pb-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-10 pb-12 sm:pb-14 lg:pb-16 border-b border-brand-cream/10">
-
-                <div class="sm:col-span-2 lg:col-span-2 space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-brand-cream/10">
+                <div class="sm:col-span-2 space-y-4">
                     <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full border border-brand-gold/40 flex items-center justify-center bg-brand-dark">
-                            <span class="text-brand-gold text-xs font-serif font-bold">M</span>
+                        <div class="w-9 h-9 rounded-full border border-brand-gold/40 flex items-center justify-center bg-brand-dark">
+                            <span class="text-brand-gold text-xs font-serif font-bold">GA</span>
                         </div>
-                        <span class="font-serif text-2xl tracking-[0.2em] font-light text-brand-cream uppercase">MAKHANAM</span>
+                        <span class="font-serif text-2xl tracking-[0.12em] font-light text-brand-cream uppercase">Makhanam</span>
                     </div>
-                    <p class="text-xs text-brand-cream/70 max-w-sm leading-relaxed font-light">
-                        Purveyors of single-origin Mithila Makhana from Bihar, India. Hand-harvested lotus seed botanicals roasted over traditional clay hearths.
+                    <p class="text-xs text-brand-cream/70 max-w-md leading-relaxed font-light">
+                        Makhanam, based in Bihar, is a dedicated specialist in premium raw Makhana (Foxnut) processing and a manufacturer for wholesalers.
                     </p>
                     <div class="pt-2 text-[11px] font-mono text-brand-gold uppercase tracking-wider">
-                        GI TAG NO: 681 • MITHILA MAKHANA HERITAGE
+                        PREMIUM RAW MAKHANA •  BIHAR
                     </div>
                 </div>
 
                 <div class="space-y-3">
                     <h4 class="font-serif text-sm tracking-widest text-brand-gold uppercase">Explore</h4>
                     <ul class="space-y-2 text-xs text-brand-cream/70 font-light">
-                        <li><a href="#origin" class="hover:text-brand-gold transition-colors">Darbhanga Wetlands</a></li>
-                        <li><a href="#journey" class="hover:text-brand-gold transition-colors">7-Stage Process</a></li>
-                        <li><a href="#flavors" class="hover:text-brand-gold transition-colors">Artisanal Reserve</a></li>
-                        <li><a href="#collection" class="hover:text-brand-gold transition-colors">Luxury Storefront</a></li>
+                        <li><a href="#about" class="hover:text-brand-gold transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-brand-gold transition-colors">Our Services</a></li>
+                        <li><a href="#partner" class="hover:text-brand-gold transition-colors">Why Partner</a></li>
+                        <li><a href="#grading" class="hover:text-brand-gold transition-colors">Grading Specifications</a></li>
                     </ul>
                 </div>
 
                 <div class="space-y-3">
-                    <h4 class="font-serif text-sm tracking-widest text-brand-gold uppercase">Heritage</h4>
+                    <h4 class="font-serif text-sm tracking-widest text-brand-gold uppercase">Contact</h4>
                     <ul class="space-y-2 text-xs text-brand-cream/70 font-light">
-                        <li><a href="#" class="hover:text-brand-gold transition-colors">Mallah Farming Guilds</a></li>
-                        <li><a href="#" class="hover:text-brand-gold transition-colors">Organic Certification</a></li>
-                        <li><a href="#" class="hover:text-brand-gold transition-colors">Sustainability Guarantee</a></li>
-                        <li><a href="#" class="hover:text-brand-gold transition-colors">Traceability Matrix</a></li>
+                        <li>Darbhanga, Bihar</li>
+                        <li><a href="tel:+918292176088" class="hover:text-brand-gold">+91 8340493639</a></li>
+                         <li><a data-whatsapp href="#" class="inline-flex items-center gap-2 text-brand-gold hover:text-brand-gold-bright" aria-label="WhatsApp bulk enquiry"><i class="fa-brands fa-whatsapp"></i> WhatsApp Bulk Enquiry</a></li>
+                        <li><a href="mailto:greenfieldagro2024@gmail.com" class="hover:text-brand-gold break-all"></a></li>
+                        <li>GSTIN: </li>
                     </ul>
                 </div>
-
-                <div class="space-y-3">
-                    <h4 class="font-serif text-sm tracking-widest text-brand-gold uppercase">Privé Gazette</h4>
-                    <p class="text-xs text-brand-cream/70 font-light">Receive private harvest announcements and seasonal blend allocations.</p>
-                    <form onsubmit="subscribeGazette(event)" class="space-y-2">
-                        <input type="email" placeholder="Enter your email address" required class="w-full px-3 py-2.5 text-xs bg-brand-dark/80 border border-brand-gold/30 rounded text-brand-cream focus:outline-none focus:border-brand-gold">
-                        <button type="submit" class="w-full py-2.5 bg-brand-gold text-brand-dark font-sans text-[11px] uppercase tracking-widest font-bold rounded hover:bg-brand-cream transition-colors">
-                            Subscribe
-                        </button>
-                    </form>
-                </div>
-
             </div>
 
-            <div class="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-brand-cream/50 font-sans space-y-3 sm:space-y-0 text-center sm:text-left">
-                <div>&copy; 2026 MAKHANAM HERITAGE PVT LTD. ALL RIGHTS RESERVED.</div>
-                <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:space-x-6">
-                    <a href="#" class="hover:text-brand-gold">Privacy Policy</a>
-                    <a href="#" class="hover:text-brand-gold">Terms of Privilege</a>
-                    <a href="#" class="hover:text-brand-gold">Mithila Geographical Indication</a>
-                </div>
+            <div class="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-brand-cream/50 font-sans gap-3 text-center sm:text-left">
+                <div>&copy; 2026 Makhanam. All rights reserved.</div>
+                <div>Premium Raw Makhana Processing • Manufacturer for Wholesalers</div>
             </div>
         </div>
     </footer>
 
-    <!-- CART DRAWER -->
-    <div id="cart-drawer" class="fixed inset-0 z-50 pointer-events-none transition-opacity duration-300 opacity-0">
-        <div id="cart-backdrop" class="absolute inset-0 bg-brand-dark/80 backdrop-blur-md" onclick="toggleCartDrawer()"></div>
-        <div id="cart-content" class="absolute top-0 right-0 bottom-0 w-full sm:w-[90%] max-w-md bg-brand-dark text-brand-cream border-l border-brand-gold/20 p-5 sm:p-6 lg:p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out drawer-slide pointer-events-auto">
-
-            <div>
-                <div class="flex items-center justify-between pb-5 sm:pb-6 border-b border-brand-gold/20">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-bag-shopping text-brand-gold text-lg"></i>
-                        <span class="font-serif text-xl sm:text-2xl tracking-widest text-brand-cream">Your Bag</span>
-                    </div>
-                    <button onclick="toggleCartDrawer()" class="text-brand-gold text-xl p-2 hover:text-brand-cream tap-target flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
-                </div>
-
-                <div class="my-5 sm:my-6 p-3.5 sm:p-4 rounded-xl bg-brand-charcoal/60 border border-brand-gold/15 space-y-2">
-                    <div class="flex items-center justify-between text-[11px] sm:text-xs font-mono gap-2">
-                        <span id="shipping-progress-text" class="text-brand-gold">Free Express Shipping</span>
-                        <span id="shipping-remaining-text" class="text-brand-cream/80 text-right">Add ₹850 more</span>
-                    </div>
-                    <div class="w-full h-1.5 bg-brand-dark rounded-full overflow-hidden">
-                        <div id="shipping-progress-bar" class="h-full bg-brand-gold transition-all duration-500 w-1/3"></div>
-                    </div>
-                </div>
-
-                <div id="cart-items-list" class="space-y-3 sm:space-y-4 max-h-[48vh] overflow-y-auto pr-1 no-scrollbar">
-                    <!-- Dynamic Cart Items Rendered via JavaScript -->
-                </div>
-            </div>
-
-            <div class="pt-5 sm:pt-6 border-t border-brand-gold/20 space-y-4">
-                <div class="space-y-2 text-[11px] sm:text-xs font-mono">
-                    <div class="flex items-center justify-between text-brand-cream/70">
-                        <span>SUBTOTAL</span>
-                        <span id="cart-subtotal-val" class="text-brand-cream font-bold">₹0</span>
-                    </div>
-                    <div class="flex items-center justify-between text-brand-cream/70">
-                        <span>ESTIMATED TAXES</span>
-                        <span id="cart-tax-val" class="text-brand-cream">INCLUDED</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm font-bold text-brand-gold pt-2 border-t border-brand-gold/10">
-                        <span>TOTAL</span>
-                        <span id="cart-total-val">₹0</span>
-                    </div>
-                </div>
-
-                <button onclick="proceedToCheckout()" class="w-full py-3.5 sm:py-4 rounded-full btn-shimmer text-brand-dark font-sans text-xs uppercase tracking-[0.2em] font-bold transition-all flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-lock text-xs"></i>
-                    <span>Proceed to Secure Checkout</span>
-                </button>
-                <p class="text-[10px] text-center text-brand-cream/50 uppercase font-mono">Complimentary Silk-Touch Gift Packaging Included</p>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- QUICK VIEW MODAL -->
-    <div id="quickview-modal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 opacity-0 pointer-events-none transition-opacity duration-300">
-        <div class="absolute inset-0 bg-brand-dark/85 backdrop-blur-md" onclick="closeQuickViewModal()"></div>
-        <div class="relative w-full max-w-3xl max-h-[92vh] overflow-y-auto glass-dark rounded-2xl sm:rounded-3xl border border-brand-gold/30 p-5 sm:p-8 text-brand-cream z-10 shadow-2xl">
-            <button onclick="closeQuickViewModal()" class="absolute top-3 right-3 sm:top-4 sm:right-4 text-brand-gold text-xl p-2 hover:text-brand-cream z-20"><i class="fa-solid fa-xmark"></i></button>
-
-            <div id="quickview-content" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
-                <!-- Dynamically populated via JS -->
-            </div>
-        </div>
-    </div>
-
-    <!-- REVIEW MODAL -->
-    <div id="review-modal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 opacity-0 pointer-events-none transition-opacity duration-300">
-        <div class="absolute inset-0 bg-brand-dark/85 backdrop-blur-md" onclick="closeReviewModal()"></div>
-        <div class="relative w-full max-w-lg max-h-[92vh] overflow-y-auto glass-dark rounded-2xl sm:rounded-3xl border border-brand-gold/30 p-5 sm:p-8 text-brand-cream z-10 shadow-2xl space-y-5 sm:space-y-6">
-            <div class="flex items-center justify-between pb-4 border-b border-brand-gold/20 gap-3">
-                <span class="font-serif text-lg sm:text-2xl text-brand-cream">Share Your MAKHANAM Experience</span>
-                <button onclick="closeReviewModal()" class="text-brand-gold text-lg p-1"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-
-            <form onsubmit="submitReview(event)" class="space-y-4">
-                <div>
-                    <label class="block text-[10px] sm:text-xs font-mono uppercase text-brand-gold mb-1">Your Name</label>
-                    <input type="text" id="rev-input-name" required placeholder="e.g., Lady Victoria Spencer" class="w-full px-3 py-2.5 bg-brand-dark/90 border border-brand-gold/30 rounded text-xs text-brand-cream focus:outline-none focus:border-brand-gold">
-                </div>
-
-                <div>
-                    <label class="block text-[10px] sm:text-xs font-mono uppercase text-brand-gold mb-1">Your Role / Title</label>
-                    <input type="text" id="rev-input-role" required placeholder="e.g., Heritage Collector / Executive Chef" class="w-full px-3 py-2.5 bg-brand-dark/90 border border-brand-gold/30 rounded text-xs text-brand-cream focus:outline-none focus:border-brand-gold">
-                </div>
-
-                <div>
-                    <label class="block text-[10px] sm:text-xs font-mono uppercase text-brand-gold mb-1">Rating</label>
-                    <select id="rev-input-rating" class="w-full px-3 py-2.5 bg-brand-dark/90 border border-brand-gold/30 rounded text-xs text-brand-gold focus:outline-none">
-                        <option value="5">5 Stars — Sublime Excellence</option>
-                        <option value="4">4 Stars — Exemplary</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-[10px] sm:text-xs font-mono uppercase text-brand-gold mb-1">Your Review Quote</label>
-                    <textarea id="rev-input-quote" rows="3" required placeholder="Describe the crunch, aroma, and wood-fired hearth nuance..." class="w-full px-3 py-2.5 bg-brand-dark/90 border border-brand-gold/30 rounded text-xs text-brand-cream focus:outline-none focus:border-brand-gold"></textarea>
-                </div>
-
-                <button type="submit" class="w-full py-3 rounded-full bg-brand-gold text-brand-dark font-sans text-xs uppercase tracking-[0.2em] font-bold hover:bg-brand-cream transition-colors">
-                    Submit Connoisseur Review
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <!-- REEL MODAL -->
-    <div id="reel-modal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 opacity-0 pointer-events-none transition-opacity duration-300">
-        <div class="absolute inset-0 bg-brand-dark/90 backdrop-blur-lg" onclick="closeReelModal()"></div>
-        <div class="relative w-full max-w-sm max-h-[92vh] aspect-[9/16] bg-brand-charcoal rounded-2xl sm:rounded-3xl overflow-hidden border border-brand-gold/30 z-10 shadow-2xl flex flex-col justify-between p-5 sm:p-6">
-            <button onclick="closeReelModal()" class="absolute top-3 right-3 sm:top-4 sm:right-4 text-brand-cream text-xl z-20 bg-brand-dark/60 backdrop-blur-md w-9 h-9 rounded-full flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
-
-            <div class="relative z-10 flex items-center gap-3">
-                <div class="w-8 h-8 rounded-full border border-brand-gold flex items-center justify-center bg-brand-dark text-brand-gold font-serif text-xs font-bold">M</div>
-                <div>
-                    <span class="text-xs font-bold text-brand-cream block">MAKHANAM Heritage</span>
-                    <span id="reel-modal-tag" class="text-[10px] font-mono text-brand-gold">Darbhanga Wetlands</span>
-                </div>
-            </div>
-
-            <div class="absolute inset-0 z-0">
-                <img id="reel-modal-img" src="" class="w-full h-full object-cover opacity-80">
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/40"></div>
-            </div>
-
-            <div class="relative z-10 space-y-3">
-                <p id="reel-modal-desc" class="text-xs text-brand-cream leading-relaxed font-light">
-                    Visual chronicle description here.
-                </p>
-                <button onclick="closeReelModal(); toggleCartDrawer();" class="w-full py-2.5 rounded-full bg-brand-gold text-brand-dark font-sans text-[11px] uppercase tracking-widest font-bold">
-                    Shop Featured Cask
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- TOAST STACK -->
+    <!-- TOAST -->
     <div id="toast-container" class="fixed bottom-4 right-3 sm:bottom-6 sm:right-6 z-[60] space-y-2 pointer-events-none max-w-[calc(100vw-1.5rem)]"></div>
 
-    <script>
-        /* APP STATE & DATA */
-        const CURRENCY_RATES = {
-            INR: { symbol: '₹', factor: 1 },
-            USD: { symbol: '$', factor: 0.012 },
-            EUR: { symbol: '€', factor: 0.011 },
-            GBP: { symbol: '£', factor: 0.0095 }
-        };
-        let currentCurrency = 'INR';
+  
+<script>
+/* =========================================================
+   MAKHANA WEBSITE — MAIN JAVASCRIPT
+========================================================= */
 
-        const PRODUCTS = [
-            {
-                id: 'prod-truffle',
-                name: 'Umbrian Truffle & 24K Gold',
-                badge: 'RESERVE BATCH 01',
-                priceINR: 649,
-                image: 'WhatsApp Image 2026-09-24 at 8.30.27 AM.jpeg',
-                hoverImage: 'https://images.unsplash.com/photo-1528733931641-f06b642a8b98?auto=format&fit=crop&q=80&w=800',
-                desc: 'Slow-roasted over clay hearths with Umbrian black truffle oil and delicate 24K gold leaves.',
-                weight: '150g Hermetic Cask',
-                rating: 5.0
-            },
-            {
-                id: 'prod-salt',
-                name: 'Himalayan Pink Salt & Ghee',
-                badge: 'BESTSELLER',
-                priceINR: 499,
-                image: 'https://images.unsplash.com/photo-1750747543829-efe69461c7f7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                hoverImage: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&q=80&w=800',
-                desc: 'Hand-harvested lotus seeds tossed in artisanal A2 Gir cow ghee and ground pink rock minerals.',
-                weight: '150g Hermetic Cask',
-                rating: 4.9
-            },
-            {
-                id: 'prod-chili',
-                name: 'Smoked Chili & Organic Jaggery',
-                badge: 'HERITAGE SPICE',
-                priceINR: 549,
-                image: 'https://pixabay.com/images/download/kumarsu6745-lotus-seed-10089952_1920.jpg',
-                hoverImage: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=800',
-                desc: 'A fiery sweet balance of sun-dried Bihari red chili powder and slow-melted palm jaggery.',
-                weight: '150g Hermetic Cask',
-                rating: 4.95
-            },
-            {
-                id: 'prod-pudina',
-                name: 'Pudina & Sun-Dried Lime',
-                badge: 'SUMMER EDITION',
-                priceINR: 529,
-                image: 'https://pixabay.com/images/download/farming_everything-fox-nuts-7143179_1920.jpg',
-                hoverImage: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=800',
-                desc: 'Crushed garden mint leaves with tangy sun-dried lime extract and Himalayan black salt.',
-                weight: '150g Hermetic Cask',
-                rating: 4.85
-            },
-            {
-                id: 'prod-raw',
-                name: 'Mithila Raw Organic Reserve',
-                badge: 'SINGLE-ORIGIN RAW',
-                priceINR: 449,
-                image: 'https://pixabay.com/images/download/kumarsu6745-asia-10089951_1920.jpg',
-                hoverImage: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&q=80&w=800',
-                desc: 'Unprocessed, large-grade raw makhana pops for customized home roasting and ayurvedic diets.',
-                weight: '250g Silk Sack',
-                rating: 4.98
-            },
-            {
-                id: 'prod-tasting',
-                name: 'The Royal Mithila Quad Cask',
-                badge: 'GIFT BOX',
-                priceINR: 1899,
-                image: ' https://pixabay.com/images/download/kumarsu6745-lotus-seed-10089952_1920.jpg ',
-                hoverImage: 'https://images.unsplash.com/photo-1509358217951-628d39f72740?auto=format&fit=crop&q=80&w=800',
-                desc: 'A luxury hand-finished wooden casket featuring Truffle, Pink Salt, Smoked Chili, and Pudina editions.',
-                weight: '4 x 100g Caskets',
-                rating: 5.0
-            }
-        ];
 
-        const FLAVORS_DATA = {
-            truffle: {
-                name: 'Black Truffle & 24K Edible Gold',
-                badge: 'RESERVE BATCH 01',
-                priceINR: 649,
-                description: 'Infused with wild Umbrian black truffle oil, delicate Himalayan salt flakes, and finished with shimmering edible 24K gold dust. Designed for fine wine pairings.',
-                crunch: '9.8 / 10',
-                roast: 'Clay Hearth',
-                pairing: 'Pinot Noir',
-                image: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&q=80&w=800'
-            },
-            salt: {
-                name: 'Himalayan Pink Salt & A2 Ghee',
-                badge: 'CLASSIC PURIST',
-                priceINR: 499,
-                description: 'Simplicity refined. Lightly tossed in pure A2 Gir Cow Ghee and sprinkled with crushed ancient rock minerals from the Himalayan foothills.',
-                crunch: '9.9 / 10',
-                roast: 'Wood Fired',
-                pairing: 'Masala Chai',
-                image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=800'
-            },
-            chili: {
-                name: 'Smoked Chili & Organic Jaggery',
-                badge: 'SWEET & FIERY',
-                priceINR: 549,
-                description: 'A harmonious contrast of oak-smoked red chilis and thick caramel notes of hand-churned organic palm jaggery from Mithilanchal.',
-                crunch: '9.5 / 10',
-                roast: 'Earthen Oven',
-                pairing: 'Single Malt',
-                image: 'https://images.unsplash.com/photo-1509358217951-628d39f72740?auto=format&fit=crop&q=80&w=800'
-            },
-            pudina: {
-                name: 'Pudina & Sun-Dried Lime',
-                badge: 'BOTANICAL BLEND',
-                priceINR: 529,
-                description: 'Crisp garden mint leaves pulverized with tangy sun-dried lime crystals. Refreshing, vibrant, and perfectly digestive.',
-                crunch: '9.7 / 10',
-                roast: 'Clay Hearth',
-                pairing: 'Sparkling Water',
-                image: 'https://images.unsplash.com/photo-1528733931641-f06b642a8b98?auto=format&fit=crop&q=80&w=800'
-            },
-            raw: {
-                name: 'Raw Mithila Organic Seeds',
-                badge: 'PURE UNROASTED',
-                priceINR: 449,
-                description: 'Grade-A extra-large unpopped lotus seeds directly from Darbhanga maans. Ideal for customized ghee roasting and traditional Kheer desserts.',
-                crunch: 'Raw Grain',
-                roast: 'Unprocessed',
-                pairing: 'Custom Recipe',
-                image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=800'
-            }
-        };
+/* =========================================================
+   1. SERVICES DATA
+========================================================= */
 
-        const JOURNEY_DATA = {
-            1: {
-                num: 'STAGE 01 / 07',
-                title: 'Pond Wetland Cultivation',
-                desc: 'In early November, organic lotus seeds are hand-sown into calm, natural wetlands (maans). The seeds settle deep into mineral-dense aquatic silt where they germinate naturally.',
-                quote: 'The wetland sediment provides natural iron and magnesium that no controlled greenhouse can ever replicate.',
-                badge: 'DARBHANGA WETLANDS',
-                img: 'https://i.pinimg.com/1200x/12/a6/e9/12a6e955ec206e79e89fe087d5c56cbf.jpg'
-            },
-            2: {
-                num: 'STAGE 02 / 07',
-                title: 'Night-Blooming Lotus Leaves',
-                desc: 'By March, giant thorny lotus leaves float on the water surface. Purple flowers bloom under full moon nights before seed pods swell and sink back down to the bed.',
-                quote: 'The nocturnal bloom cycle gives the seeds their dense, starch-filled protective coat.',
-                badge: 'MOONLIGHT BLOOM',
-                img: 'https://i.pinimg.com/1200x/41/5a/43/415a43b88cef07fa50f99f79fc1d1cb0.jpg'
-            },
-            3: {
-                num: 'STAGE 03 / 07',
-                title: 'Submerged Manual Harvest',
-                desc: 'Artisans dive into 6-foot deep muddy waters using traditional bamboo sieves (Ganja) to manually scoop up raw seed pods without damaging pond beds.',
-                quote: 'A centuries-old swimming technique mastered solely by Bihar’s Mallah community.',
-                badge: 'HERITAGE DIVING',
-                img: 'https://rukminim3.flixcart.com/image/480/640/xif0q/net/8/v/x/deep-water-big-bamboo-fishing-cage-for-crab-shrimp-salmon-2-feet-original-imah3mxeyy2g6gys.jpeg?q=20'
-            },
-            4: {
-                num: 'STAGE 04 / 07',
-                title: 'Solar Sun-Drying & Grading',
-                desc: 'Raw seeds are washed repeatedly in clean water and spread across woven jute mats under direct Bihar sunlight to achieve ideal moisture balance.',
-                quote: 'Only seeds exceeding 14mm in diameter are chosen for MAKHANAM Reserve Casks.',
-                badge: 'SOLAR BALANCE',
-                img: 'https://productimages.withfloats.com/new-converted/60be07f94ec6e80001311960.jpg'
-            },
-            5: {
-                num: 'STAGE 05 / 07',
-                title: 'Wood-Fired Clay Hearth Popping',
-                desc: 'Master artisans roast seeds in four successive clay pots over wood fires, followed by rapid wooden hammer tapping to instantly pop seeds open.',
-                quote: 'The acoustic crack sound signals the exact microsecond the white bloom expands.',
-                badge: 'CLAY HEARTH POP',
-                img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwJNC9V-9wGuBkWf59jH_JlikVeGonKJrQCvhD2xxcUMJMLLiIJ0bm5ek&s=10'
-            },
-            6: {
-                num: 'STAGE 06 / 07',
-                title: 'Botanical & Oil Infusion',
-                desc: 'Popped foxnuts are gently misted with organic cold-pressed oils or A2 ghee, then tumbled with rare spices like Umbrian truffle or pink rock salt.',
-                quote: 'Zero trans fats, zero artificial preservatives — only pure nature.',
-                badge: 'GOURMET INFUSION',
-                img: 'https://cdn.pixabay.com/photo/2026/01/27/04/33/asia-10089951_640.jpg'
-            },
-            7: {
-                num: 'STAGE 07 / 07',
-                title: 'Hermetic Silk-Touch Cask',
-                desc: 'Sealed inside nitrogen-flushed, matte-finish luxury metal casks designed to preserve maximum crunch and botanical aroma for up to 12 months.',
-                quote: 'A sensory gift box ready for the world’s finest luxury pantries.',
-                badge: 'HERMETIC SEAL',
-                img: 'https://i.pinimg.com/736x/dc/08/31/dc08311ae07bce53314fb5c9712f1cae.jpg'
-            }
-        };
+const SERVICES_DATA = {
 
-        const REVIEWS_DATA = [
-            {
-                id: 1,
-                name: 'Chef Antoine Dubois',
-                role: 'Michelin Star Chef, Paris',
-                type: 'chef',
-                stars: 5,
-                quote: 'The Umbrian Black Truffle Makhana from MAKHANAM has earned a permanent position on our evening aperitif menu in Paris. Exceptional crunch and aroma.',
-                avatar: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&q=80&w=200'
-            },
-            {
-                id: 2,
-                name: 'Lady Eleanor Vance',
-                role: 'Heritage Collector, London',
-                type: 'collector',
-                stars: 5,
-                quote: 'Unboxing the Royal Quad Cask felt like receiving a royal artifact. The single-origin story from Bihar adds deep soul to every bite.',
-                avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'
-            },
-            {
-                id: 3,
-                name: 'Devika Singhania',
-                role: 'Verified Buyer, Mumbai',
-                type: 'verified',
-                stars: 5,
-                quote: 'Finally, a makhana brand that treats this ancient superfood with true luxury and zero cut corners. The Himalayan Pink Salt is sublime.',
-                avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=200'
-            }
-        ];
+    1: {
+        num: 'SERVICE 01 / 03',
+        title: 'Advanced Color Sorting',
+        desc: 'Employing specialized optical machinery for automated colour sorting of popped Makhana (Lawa), removing discolored or inferior kernels.',
+        highlight: 'Automated colour sorting of popped Makhana (Lawa), removing discolored or inferior kernels.',
+        badge: 'ADVANCED SORTING',
+        img: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=1000'
+    },
 
-        let cart = [];
+    2: {
+        num: 'SERVICE 02 / 03',
+        title: 'Traditional Handpicking',
+        desc: 'Utilizing skilled local labor for the delicate process of handpicking raw Makhana seeds from the pond bed, ensuring minimal damage and high initial purity.',
+        highlight: 'Skilled local labor supports minimal damage and high initial purity during handpicking.',
+        badge: 'TRADITIONAL HANDPICKING',
+        img: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=1000'
+    },
 
-        /* INITIALIZATION */
-        window.addEventListener('DOMContentLoaded', () => {
-            renderProducts();
-            renderReviews('all');
-            updateCartUI();
-            initRevealObserver();
+    3: {
+        num: 'SERVICE 03 / 03',
+        title: 'Precision Grading',
+        desc: 'Implementing rigorous grading based on size, density, and puff quality, separating the kernels into premium, standardized categories.',
+        highlight: 'Rigorous grading based on size, density, and puff quality into premium, standardized categories.',
+        badge: 'PRECISION GRADING',
+        img: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&q=80&w=1000'
+    }
+
+};
+
+
+/* =========================================================
+   2. GRADING DATA
+========================================================= */
+
+const GRADING_DATA = [
+
+    {
+        grade: '6+ HP',
+        size: '19–24 mm',
+        image: '6+.jpeg'
+    },
+
+    {
+        grade: '5+ HP',
+        size: '15.75–24 mm',
+        image: 'https://pixabay.com/images/download/kumarsu6745-asia-10089951_1920.jpg'
+    },
+
+    {
+        grade: '5 HP',
+        size: '15.7–19 mm',
+        image: 'https://pixabay.com/images/download/kumarsu6745-lotus-seed-10089952_1920.jpg'
+    },
+
+    {
+        grade: '5+',
+        size: '15.75–24 mm',
+        image: 'https://images.pexels.com/photos/29246691/pexels-photo-29246691.jpeg'
+    },
+
+    {
+        grade: '4+ HP',
+        size: '12.5–24 mm',
+        image: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&q=80&w=800'
+    },
+
+    {
+        grade: '4 HP',
+        size: '12.5–15.5 mm',
+        image: '4 suta.jpeg'
+    },
+
+    {
+        grade: '4+',
+        size: '12.5–24 mm',
+        image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=800'
+    },
+
+    {
+        grade: '4',
+        size: '12.5–15.5 mm',
+        image: 'https://images.unsplash.com/photo-1528733931641-f06b642a8b98?auto=format&fit=crop&q=80&w=800'
+    }
+
+];
+
+
+/* =========================================================
+   3. SEVEN-STAGE MAKHANA JOURNEY
+========================================================= */
+
+const JOURNEY_DATA = {
+
+    1: {
+        num: 'STAGE 01 / 07',
+        title: 'The Living Wetland',
+        desc: 'The journey begins in the water bodies of Bihar. Traditional Makhana is cultivated in ponds and wetlands where the crop grows in standing water, rooted in the aquatic environment.',
+        quote: 'Before the first seed is sown, the water must be ready to receive it.',
+        source: '— Traditional Makhana Cultivation',
+        badge: 'BIHAR WETLANDS',
+        img: 'assets/images/journey/01-wetland.webp'
+    },
+
+    2: {
+        num: 'STAGE 02 / 07',
+        title: 'The First Seed',
+        desc: 'The journey begins with the Makhana seed. In traditional pond cultivation, seeds from the previous crop can provide planting material, while improved systems raise young seedlings before transplanting them into the main field.',
+        quote: 'Every harvest begins with something small, placed carefully beneath the water.',
+        source: '— Makhana Cultivation',
+        badge: 'SEED SOWING',
+        img: 'https://i.pinimg.com/1200x/41/e3/5e/41e35eb2db7f261d7b8e93e3d48db4e3.jpg'
+    },
+
+    3: {
+        num: 'STAGE 03 / 07',
+        title: 'Life Beneath the Surface',
+        desc: 'After germination, young Makhana plants begin developing beneath and around the water surface. Gradually, their distinctive round leaves emerge and begin spreading across the pond.',
+        quote: 'Much of the journey happens where the eye cannot see.',
+        source: '— Makhana Growth Cycle',
+        badge: 'EARLY GROWTH',
+        img: 'https://i.pinimg.com/1200x/7a/9f/72/7a9f720a9cd2df6afd5413adde82a96f.jpg'
+    },
+
+    4: {
+        num: 'STAGE 04 / 07',
+        title: 'The Floating Canopy',
+        desc: 'As the plants mature, large floating leaves spread across the water. In field-based cultivation, young seedlings are transplanted and carefully managed until the growing Makhana plants create a dense green canopy.',
+        quote: 'Slowly, one leaf becomes many — until the water turns into a living green landscape.',
+        source: '— Makhana Field Cultivation',
+        badge: 'MAKHANA FIELD',
+        img: 'https://i.pinimg.com/1200x/41/e3/5e/41e35eb2db7f261d7b8e93e3d48db4e3.jpg'
+    },
+
+    5: {
+        num: 'STAGE 05 / 07',
+        title: 'The Flower Beneath',
+        desc: 'Once the plant matures, its distinctive flower appears among the floating leaves. After flowering and fruit development, the Makhana seeds mature inside the prickly fruit beneath the water.',
+        quote: 'A beautiful flower above the water hides the beginning of the harvest below.',
+        source: '— Makhana Flower & Fruit',
+        badge: 'FLOWER & FRUIT',
+        img: 'https://i.pinimg.com/1200x/64/cf/d9/64cfd9fa2b3184edf12c6234d8551afa.jpg'
+    },
+
+    6: {
+        num: 'STAGE 06 / 07',
+        title: 'The Underwater Harvest',
+        desc: 'When the fruits mature, the seeds settle beneath the water. Farmers enter the ponds and collect the seeds from the bottom by hand — a physically demanding process requiring patience, experience and skill.',
+        quote: 'The harvest is hidden beneath the water — and human hands bring it back to the surface.',
+        source: '— Traditional Makhana Harvesting',
+        badge: 'UNDERWATER HARVEST',
+        img: 'https://i.pinimg.com/736x/7b/21/c2/7b21c2d7b5e2460c1fbac1e44b040ab2.jpg'
+    },
+
+    7: {
+        num: 'STAGE 07 / 07',
+        title: 'The Art of Popping',
+        desc: 'After harvesting, the seeds are cleaned and dried before processing. Traditional processing involves roasting the seeds at high temperature and carefully popping them, transforming the hard dark seed into the light, crisp Phool Makhana.',
+        quote: 'From a dark seed gathered beneath the water comes the delicate white Makhana we know.',
+        source: '— Traditional Makhana Processing',
+        badge: 'PHOOL MAKHANA',
+        img: 'https://i.pinimg.com/736x/dc/08/31/dc08311ae07bce53314fb5c9712f1cae.jpg'
+    }
+
+};
+
+
+/* =========================================================
+   4. INITIALIZE EVERYTHING AFTER DOM LOAD
+========================================================= */
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    renderGrading();
+
+    initRevealObserver();
+
+    if (document.getElementById('service-title')) {
+        setServiceStep(1);
+    }
+
+    if (document.getElementById('journey-title')) {
+        setJourneyStep(1);
+    }
+
+    preloadJourneyImages();
+    initWhatsAppLinks();
+
+});
+
+
+/* =========================================================
+   5. PRELOAD JOURNEY IMAGES
+========================================================= */
+
+function preloadJourneyImages() {
+
+    Object.values(JOURNEY_DATA).forEach(function (stage) {
+
+        if (!stage.img) return;
+
+        const image = new Image();
+
+        image.src = stage.img;
+
+    });
+
+}
+
+
+/* =========================================================
+   6. REVEAL ANIMATION OBSERVER
+========================================================= */
+
+function initRevealObserver() {
+
+    const elements = document.querySelectorAll('.reveal');
+
+    if (!('IntersectionObserver' in window)) {
+
+        elements.forEach(function (element) {
+
+            element.classList.add('is-visible');
+
         });
 
-        /* SCROLL REVEAL OBSERVER */
-        function initRevealObserver() {
-            const els = document.querySelectorAll('.reveal');
-            if (!('IntersectionObserver' in window)) {
-                els.forEach(el => el.classList.add('is-visible'));
-                return;
+        return;
+    }
+
+
+    const observer = new IntersectionObserver(
+
+        function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add('is-visible');
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        }
+
+    );
+
+
+    elements.forEach(function (element) {
+
+        observer.observe(element);
+
+    });
+
+}
+
+
+/* =========================================================
+   7. SERVICE SWITCHER
+========================================================= */
+
+function setServiceStep(stepNum) {
+
+    const data = SERVICES_DATA[stepNum];
+
+    if (!data) {
+
+        console.warn('Service not found:', stepNum);
+
+        return;
+    }
+
+
+    const num = document.getElementById('service-num');
+    const title = document.getElementById('service-title');
+    const desc = document.getElementById('service-desc');
+    const highlight = document.getElementById('service-highlight');
+    const badge = document.getElementById('service-badge');
+    const image = document.getElementById('service-img');
+
+
+    if (num) {
+        num.textContent = data.num;
+    }
+
+    if (title) {
+        title.textContent = data.title;
+    }
+
+    if (desc) {
+        desc.textContent = data.desc;
+    }
+
+    if (highlight) {
+        highlight.textContent = data.highlight;
+    }
+
+    if (badge) {
+        badge.textContent = data.badge;
+    }
+
+
+    if (image) {
+
+        image.style.opacity = '0';
+
+        setTimeout(function () {
+
+            image.src = data.img;
+
+            image.onload = function () {
+                image.style.opacity = '1';
+            };
+
+            image.onerror = function () {
+
+                console.warn(
+                    'Unable to load service image:',
+                    data.img
+                );
+
+                image.style.opacity = '1';
+
+            };
+
+        }, 150);
+
+    }
+
+
+    document
+        .querySelectorAll('.service-step-btn')
+        .forEach(function (button) {
+
+            button.classList.remove(
+                'bg-brand-gold',
+                'text-brand-dark',
+                'font-bold'
+            );
+
+            button.classList.add(
+                'text-brand-cream/60',
+                'hover:text-brand-gold'
+            );
+
+        });
+
+
+    const activeButton =
+        document.getElementById(`service-btn-${stepNum}`);
+
+
+    if (activeButton) {
+
+        activeButton.classList.remove(
+            'text-brand-cream/60',
+            'hover:text-brand-gold'
+        );
+
+        activeButton.classList.add(
+            'bg-brand-gold',
+            'text-brand-dark',
+            'font-bold'
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   8. MAKHANA JOURNEY SWITCHER
+========================================================= */
+
+function setJourneyStep(stepNum) {
+
+    const data = JOURNEY_DATA[stepNum];
+
+    if (!data) {
+
+        console.warn('Journey stage not found:', stepNum);
+
+        return;
+    }
+
+
+    const stepNumber =
+        document.getElementById('journey-step-num');
+
+    const title =
+        document.getElementById('journey-title');
+
+    const description =
+        document.getElementById('journey-desc');
+
+    const quote =
+        document.getElementById('journey-quote');
+
+    const source =
+        document.getElementById('journey-source');
+
+    const badge =
+        document.getElementById('journey-badge');
+
+    const image =
+        document.getElementById('journey-img');
+
+    const imageStage =
+        document.getElementById('journey-image-stage');
+
+
+    if (stepNumber) {
+        stepNumber.textContent = data.num;
+    }
+
+    if (title) {
+        title.textContent = data.title;
+    }
+
+    if (description) {
+        description.textContent = data.desc;
+    }
+
+    if (quote) {
+        quote.textContent = `"${data.quote}"`;
+    }
+
+    if (source) {
+        source.textContent = data.source;
+    }
+
+    if (badge) {
+        badge.textContent = data.badge;
+    }
+
+    if (imageStage) {
+        imageStage.textContent =
+            `STAGE ${String(stepNum).padStart(2, '0')}`;
+    }
+
+
+    /*
+       Animate the current image away before
+       replacing it with the next stage.
+    */
+
+    if (image) {
+
+        image.style.opacity = '0';
+        image.style.transform = 'scale(1.04)';
+
+
+        setTimeout(function () {
+
+            image.src = data.img;
+
+
+            image.onload = function () {
+
+                image.style.opacity = '1';
+                image.style.transform = 'scale(1)';
+
+            };
+
+
+            image.onerror = function () {
+
+                console.warn(
+                    'Journey image could not be loaded:',
+                    data.img
+                );
+
+                image.style.opacity = '1';
+                image.style.transform = 'scale(1)';
+
+            };
+
+
+            if (image.complete) {
+
+                image.style.opacity = '1';
+                image.style.transform = 'scale(1)';
+
             }
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-            els.forEach(el => observer.observe(el));
-        }
 
-        function formatPrice(amountINR) {
-            const curr = CURRENCY_RATES[currentCurrency];
-            const converted = (amountINR * curr.factor).toFixed(curr.factor < 1 ? 2 : 0);
-            return `${curr.symbol}${converted}`;
-        }
+        }, 180);
 
-        function switchCurrency(newCurr) {
-            currentCurrency = newCurr;
-            const topSelect = document.getElementById('currency-select');
-            if (topSelect) topSelect.value = newCurr;
-            const threshold = newCurr === 'INR' ? '₹2,499' : formatPrice(2499);
-            document.getElementById('announcement-threshold').innerText = threshold;
-            renderProducts();
-            updateFlavorShowcaseUI();
-            updateCartUI();
-            showToast(`Currency changed to ${newCurr}`);
-        }
+    }
 
-        function renderProducts() {
-            const container = document.getElementById('product-grid');
-            container.innerHTML = PRODUCTS.map(p => `
-                <div class="group relative bg-brand-cream rounded-2xl overflow-hidden border border-brand-earth/15 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+
+    /*
+       Reset every Journey button.
+    */
+
+    document
+        .querySelectorAll('.journey-step-btn')
+        .forEach(function (button) {
+
+            button.classList.remove(
+                'bg-brand-gold',
+                'text-brand-dark',
+                'font-bold'
+            );
+
+            button.classList.add(
+                'text-brand-cream/60',
+                'hover:text-brand-gold'
+            );
+
+        });
+
+
+    /*
+       Highlight selected Journey stage.
+    */
+
+    const activeJourneyButton =
+        document.getElementById(`step-btn-${stepNum}`);
+
+
+    if (activeJourneyButton) {
+
+        activeJourneyButton.classList.remove(
+            'text-brand-cream/60',
+            'hover:text-brand-gold'
+        );
+
+        activeJourneyButton.classList.add(
+            'bg-brand-gold',
+            'text-brand-dark',
+            'font-bold'
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   9. BUILD GRADING SECTION
+========================================================= */
+
+function renderGrading() {
+
+    const container =
+        document.getElementById('grading-grid');
+
+
+    if (!container) {
+        return;
+    }
+
+
+    container.innerHTML = GRADING_DATA.map(function (item) {
+
+        return `
+
+            <article
+                class="group bg-brand-cream rounded-2xl
+                       overflow-hidden border border-brand-earth/15
+                       shadow-sm hover:shadow-xl
+                       transition-all duration-500">
+
+                <div
+                    class="relative aspect-[4/3]
+                           overflow-hidden bg-brand-ivory">
+
+                    <img
+                        src="${item.image}"
+                        alt="${item.grade} Makhana grading"
+                        loading="lazy"
+                        onerror="this.style.display='none'"
+                        class="w-full h-full object-cover
+                               group-hover:scale-105
+                               transition-transform duration-700"
+                    >
+
+                    <div
+                        class="absolute inset-0
+                               bg-gradient-to-t
+                               from-brand-dark/65
+                               via-transparent
+                               to-transparent">
+                    </div>
+
+                    <div
+                        class="absolute top-3 left-3
+                               bg-brand-dark/85
+                               text-brand-gold
+                               text-[10px] font-mono
+                               px-2.5 py-1 rounded-full
+                               border border-brand-gold/25">
+
+                        PREMIUM GRADE
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="p-5 sm:p-6
+                           flex items-end
+                           justify-between gap-4">
+
                     <div>
-                        <div class="relative aspect-square overflow-hidden bg-brand-ivory cursor-pointer" onclick="openQuickViewModal('${p.id}')">
-                            <img src="${p.image}" alt="${p.name}" loading="lazy" class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
-                            <img src="${p.hoverImage}" alt="${p.name} Alt" loading="lazy" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            <div class="absolute top-3 sm:top-4 left-3 sm:left-4 bg-brand-dark/80 backdrop-blur-md text-brand-gold text-[9px] sm:text-[10px] font-mono px-2.5 sm:px-3 py-1 rounded-full border border-brand-gold/20">
-                                ${p.badge}
-                            </div>
+
+                        <div
+                            class="text-[10px]
+                                   uppercase tracking-widest
+                                   text-brand-terracotta
+                                   font-semibold">
+
+                            Grade
+
                         </div>
-                        <div class="p-5 sm:p-6 space-y-2">
-                            <div class="flex items-center justify-between gap-2">
-                                <span class="text-[9px] sm:text-[10px] font-mono text-brand-terracotta uppercase tracking-wider">${p.weight}</span>
-                                <div class="flex text-brand-gold text-xs items-center">
-                                    <i class="fa-solid fa-star"></i>
-                                    <span class="ml-1 font-mono text-brand-dark font-bold">${p.rating}</span>
-                                </div>
-                            </div>
-                            <h3 class="font-serif text-xl sm:text-2xl text-brand-dark font-light">${p.name}</h3>
-                            <p class="text-xs text-brand-charcoal/75 font-light leading-relaxed line-clamp-2">${p.desc}</p>
+
+                        <h3
+                            class="font-serif
+                                   text-2xl sm:text-3xl
+                                   font-light
+                                   text-brand-dark mt-1">
+
+                            ${item.grade}
+
+                        </h3>
+
+                    </div>
+
+
+                    <div class="text-right">
+
+                        <div
+                            class="text-[10px]
+                                   uppercase tracking-widest
+                                   text-brand-terracotta
+                                   font-semibold">
+
+                            Size
+
                         </div>
+
+                        <div
+                            class="font-mono text-sm
+                                   text-brand-earth mt-1">
+
+                            ${item.size}
+
+                        </div>
+
                     </div>
-                    <div class="p-5 sm:p-6 pt-0 flex items-center justify-between border-t border-brand-earth/10 mt-4 gap-3">
-                        <span class="font-serif text-lg sm:text-xl font-semibold text-brand-dark">${formatPrice(p.priceINR)}</span>
-                        <button onclick="addToCart('${p.id}')" class="px-4 sm:px-5 py-2.5 rounded-full bg-brand-dark text-brand-cream hover:bg-brand-gold hover:text-brand-dark text-xs uppercase tracking-wider font-semibold transition-all flex items-center gap-2">
-                            <i class="fa-solid fa-bag-shopping"></i>
-                            <span>Add</span>
-                        </button>
-                    </div>
+
                 </div>
-            `).join('');
-        }
 
-        function setJourneyStep(stepNum) {
-            const data = JOURNEY_DATA[stepNum];
-            document.getElementById('journey-step-num').innerText = data.num;
-            document.getElementById('journey-title').innerText = data.title;
-            document.getElementById('journey-desc').innerText = data.desc;
-            document.getElementById('journey-quote').innerText = `"${data.quote}"`;
-            document.getElementById('journey-badge').innerText = data.badge;
-            document.getElementById('journey-img').src = data.img;
+            </article>
 
-            document.querySelectorAll('.journey-step-btn').forEach(btn => {
-                btn.className = 'journey-step-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-t-xl font-mono text-[10px] sm:text-xs tracking-wider uppercase transition-all whitespace-nowrap text-brand-cream/60 hover:text-brand-gold';
-            });
-            document.getElementById(`step-btn-${stepNum}`).className = 'journey-step-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-t-xl font-mono text-[10px] sm:text-xs tracking-wider uppercase transition-all whitespace-nowrap bg-brand-gold text-brand-dark font-bold';
-        }
+        `;
 
-        function showHotspot(type) {
-            const title = document.getElementById('hotspot-title');
-            const desc = document.getElementById('hotspot-desc');
-            const tag = document.getElementById('hotspot-tag');
+    }).join('');
 
-            if (type === 'lotus') {
-                title.innerText = 'The Lotus (Kamal) — Sacred Purity';
-                desc.innerText = 'In Mithila mythology, the lotus symbolizes untainted purity arising from muddy waters. Its leaves are naturally water-repellent, serving as our symbol for organic integrity.';
-                tag.innerText = 'SYMBOL OF PURITY';
-            } else if (type === 'fish') {
-                title.innerText = 'Matsya (Fish) — Wetland Abundance';
-                desc.innerText = 'Madhubani fish motifs celebrate the aquatic biodiversity of Bihar maans. Fish co-exist in makhana ponds, keeping waters oxygenated and balanced naturally.';
-                tag.innerText = 'ECOLOGICAL HARMONY';
-            } else if (type === 'fire') {
-                title.innerText = 'Annal (Fire) — Clay Hearth Popping';
-                desc.innerText = 'Representing the wood-fire element required to pop dried foxnuts. The intense sudden heat causes the inner starches to explode into crisp white lotus clouds.';
-                tag.innerText = 'ELEMENTAL CRAFT';
+}
+
+
+/* =========================================================
+   10. MOBILE NAVIGATION
+========================================================= */
+
+function toggleMobileNav() {
+
+    const drawer =
+        document.getElementById('mobile-nav-drawer');
+
+    const content =
+        document.getElementById('mobile-menu-content');
+
+
+    if (!drawer || !content) {
+        return;
+    }
+
+
+    const isOpen =
+        drawer.classList.contains('opacity-100');
+
+
+    if (!isOpen) {
+
+        drawer.classList.remove(
+            'pointer-events-none',
+            'opacity-0'
+        );
+
+        drawer.classList.add('opacity-100');
+
+        content.classList.remove(
+            '-translate-x-full'
+        );
+
+        document.body.style.overflow = 'hidden';
+
+    } else {
+
+        drawer.classList.add(
+            'pointer-events-none',
+            'opacity-0'
+        );
+
+        drawer.classList.remove(
+            'opacity-100'
+        );
+
+        content.classList.add(
+            '-translate-x-full'
+        );
+
+        document.body.style.overflow = '';
+
+    }
+
+}
+
+
+/* =========================================================
+   11. MOBILE NAV LINK CLOSE
+========================================================= */
+
+document.addEventListener('click', function (event) {
+
+    const link =
+        event.target.closest('#mobile-nav-drawer a');
+
+
+    if (!link) {
+        return;
+    }
+
+
+    const drawer =
+        document.getElementById('mobile-nav-drawer');
+
+    const content =
+        document.getElementById('mobile-menu-content');
+
+
+    if (!drawer || !content) {
+        return;
+    }
+
+
+    drawer.classList.add(
+        'pointer-events-none',
+        'opacity-0'
+    );
+
+    drawer.classList.remove(
+        'opacity-100'
+    );
+
+    content.classList.add(
+        '-translate-x-full'
+    );
+
+    document.body.style.overflow = '';
+
+});
+
+
+/* =========================================================
+   12. ESCAPE KEY CLOSES MOBILE MENU
+========================================================= */
+
+document.addEventListener('keydown', function (event) {
+
+    if (event.key !== 'Escape') {
+        return;
+    }
+
+
+    const drawer =
+        document.getElementById('mobile-nav-drawer');
+
+    const content =
+        document.getElementById('mobile-menu-content');
+
+
+    if (!drawer || !content) {
+        return;
+    }
+
+
+    drawer.classList.add(
+        'pointer-events-none',
+        'opacity-0'
+    );
+
+    drawer.classList.remove(
+        'opacity-100'
+    );
+
+    content.classList.add(
+        '-translate-x-full'
+    );
+
+    document.body.style.overflow = '';
+
+});
+
+
+/* =========================================================
+   13. TOAST MESSAGE
+========================================================= */
+
+function showToast(message) {
+
+    const container =
+        document.getElementById('toast-container');
+
+
+    if (!container) {
+
+        console.warn('Toast container not found.');
+
+        return;
+    }
+
+
+    const toast =
+        document.createElement('div');
+
+
+    toast.className =
+        'glass-dark border border-brand-gold/40 ' +
+        'text-brand-cream px-4 py-3 rounded-xl ' +
+        'shadow-2xl text-[11px] sm:text-xs font-mono ' +
+        'flex items-center gap-2 ' +
+        'transform translate-y-4 opacity-0 ' +
+        'transition-all duration-300';
+
+
+    toast.innerHTML = `
+
+        <span
+            class="w-2 h-2 rounded-full
+                   bg-brand-gold shrink-0">
+        </span>
+
+        <span>${message}</span>
+
+    `;
+
+
+    container.appendChild(toast);
+
+
+    setTimeout(function () {
+
+        toast.classList.remove(
+            'translate-y-4',
+            'opacity-0'
+        );
+
+    }, 10);
+
+
+    setTimeout(function () {
+
+        toast.classList.add(
+            'translate-y-4',
+            'opacity-0'
+        );
+
+
+        setTimeout(function () {
+
+            if (toast.parentNode) {
+                toast.remove();
             }
+
+        }, 300);
+
+    }, 3500);
+
+}
+
+
+/* =========================================================
+   14. KEYBOARD CONTROL FOR JOURNEY
+   LEFT  = PREVIOUS
+   RIGHT = NEXT
+========================================================= */
+
+document.addEventListener('keydown', function (event) {
+
+    if (!document.getElementById('journey')) {
+        return;
+    }
+
+
+    const activeButton =
+        document.querySelector(
+            '.journey-step-btn.bg-brand-gold'
+        );
+
+
+    if (!activeButton) {
+        return;
+    }
+
+
+    const currentStep =
+        parseInt(
+            activeButton.id.replace('step-btn-', ''),
+            10
+        );
+
+
+    if (
+        event.key === 'ArrowLeft' &&
+        currentStep > 1
+    ) {
+
+        setJourneyStep(currentStep - 1);
+
+    }
+
+
+    if (
+        event.key === 'ArrowRight' &&
+        currentStep < 7
+    ) {
+
+        setJourneyStep(currentStep + 1);
+
+    }
+
+});
+
+
+/* =========================================================
+   15. JOURNEY / SERVICE IMAGE TRANSITION
+========================================================= */
+
+(function addImageTransition() {
+
+    const style =
+        document.createElement('style');
+
+    style.textContent = `
+
+        #journey-img,
+        #service-img {
+            transition:
+                opacity 0.35s ease,
+                transform 0.5s ease;
         }
 
-        let activeFlavorKey = 'truffle';
+    `;
 
-        function selectFlavor(key) {
-            activeFlavorKey = key;
-            document.querySelectorAll('.flavor-pill').forEach(pill => {
-                pill.className = 'flavor-pill shrink-0 px-5 sm:px-6 py-2.5 rounded-full border border-brand-gold/30 text-brand-cream/80 hover:border-brand-gold font-sans text-[11px] sm:text-xs uppercase tracking-wider font-medium transition-all';
-            });
-            document.getElementById(`flavor-pill-${key}`).className = 'flavor-pill shrink-0 px-5 sm:px-6 py-2.5 rounded-full border border-brand-gold bg-brand-gold text-brand-dark font-sans text-[11px] sm:text-xs uppercase tracking-wider font-bold transition-all';
-            updateFlavorShowcaseUI();
-        }
+    document.head.appendChild(style);
 
-        function updateFlavorShowcaseUI() {
-            const data = FLAVORS_DATA[activeFlavorKey];
-            document.getElementById('flavor-badge').innerText = data.badge;
-            document.getElementById('flavor-price').innerText = formatPrice(data.priceINR);
-            document.getElementById('flavor-name').innerText = data.name;
-            document.getElementById('flavor-description').innerText = data.description;
-            document.getElementById('flavor-crunch').innerText = data.crunch;
-            document.getElementById('flavor-roast').innerText = data.roast;
-            document.getElementById('flavor-pairing').innerText = data.pairing;
-            document.getElementById('flavor-image').src = data.image;
-        }
+})();
 
-        function addSelectedFlavorToCart() {
-            const data = FLAVORS_DATA[activeFlavorKey];
-            const product = PRODUCTS.find(p => p.name.includes(data.name.split(' ')[0])) || PRODUCTS[0];
-            addToCart(product.id);
-        }
+/* =========================================================
+   16. WHATSAPP BULK ENQUIRY
+   Direct WhatsApp integration — no exposed API key/token.
+========================================================= */
 
-        /* CART MANAGEMENT */
-        function addToCart(productId) {
-            const prod = PRODUCTS.find(p => p.id === productId);
-            if (!prod) return;
-            const existing = cart.find(item => item.id === productId);
-            if (existing) {
-                existing.qty += 1;
-            } else {
-                cart.push({ ...prod, qty: 1 });
-            }
-            updateCartUI();
-            toggleCartDrawer(true);
-            showToast(`Added ${prod.name} to Bag`);
-        }
+const WHATSAPP_CONFIG = {
+    number: '918340493639',
+    message: 'Hello Makhanam, I want Makhana in bulk.'
+};
 
-        function changeQty(productId, delta) {
-            const item = cart.find(i => i.id === productId);
-            if (!item) return;
-            item.qty += delta;
-            if (item.qty <= 0) {
-                cart = cart.filter(i => i.id !== productId);
-            }
-            updateCartUI();
-        }
+function getWhatsAppUrl(customMessage = WHATSAPP_CONFIG.message) {
+    return `https://wa.me/${WHATSAPP_CONFIG.number}?text=${encodeURIComponent(customMessage)}`;
+}
 
-        function updateCartUI() {
-            const totalCount = cart.reduce((acc, i) => acc + i.qty, 0);
-            document.getElementById('cart-counter').innerText = totalCount;
+function openWhatsApp(customMessage = WHATSAPP_CONFIG.message) {
+    const url = getWhatsAppUrl(customMessage);
+    window.open(url, '_blank', 'noopener,noreferrer');
+}
 
-            const container = document.getElementById('cart-items-list');
-            if (cart.length === 0) {
-                container.innerHTML = `
-                    <div class="text-center py-12 text-brand-cream/60 space-y-3 font-light">
-                        <i class="fa-solid fa-bag-shopping text-3xl text-brand-gold/40 block"></i>
-                        <p class="text-sm">Your luxury bag is currently empty.</p>
-                        <a href="#collection" onclick="toggleCartDrawer(false)" class="inline-block text-xs uppercase tracking-widest text-brand-gold underline">Explore Collection</a>
-                    </div>
-                `;
-            } else {
-                container.innerHTML = cart.map(item => `
-                    <div class="flex items-center gap-3 sm:gap-4 p-3 rounded-xl bg-brand-charcoal/80 border border-brand-gold/15">
-                        <img src="${item.image}" class="w-14 h-14 sm:w-16 sm:h-16 object-cover rounded-lg shrink-0" alt="${item.name}">
-                        <div class="flex-1 min-w-0 space-y-1">
-                            <span class="text-[9px] sm:text-[10px] font-mono text-brand-gold uppercase block truncate">${item.weight}</span>
-                            <h4 class="font-serif text-xs sm:text-sm font-light text-brand-cream leading-tight line-clamp-2">${item.name}</h4>
-                            <div class="font-serif text-xs font-semibold text-brand-gold">${formatPrice(item.priceINR * item.qty)}</div>
-                        </div>
-                        <div class="flex items-center gap-1.5 sm:gap-2 border border-brand-gold/30 rounded-lg px-1.5 sm:px-2 py-1 text-xs shrink-0">
-                            <button onclick="changeQty('${item.id}', -1)" class="text-brand-cream hover:text-brand-gold p-1"><i class="fa-solid fa-minus text-[9px]"></i></button>
-                            <span class="font-mono text-xs font-bold w-4 text-center">${item.qty}</span>
-                            <button onclick="changeQty('${item.id}', 1)" class="text-brand-cream hover:text-brand-gold p-1"><i class="fa-solid fa-plus text-[9px]"></i></button>
-                        </div>
-                    </div>
-                `).join('');
-            }
+/* Keep all WhatsApp CTAs consistent across the website. */
+function initWhatsAppLinks() {
+    const message = WHATSAPP_CONFIG.message;
+    const url = getWhatsAppUrl(message);
 
-            const subtotalINR = cart.reduce((acc, i) => acc + (i.priceINR * i.qty), 0);
-            document.getElementById('cart-subtotal-val').innerText = formatPrice(subtotalINR);
-            document.getElementById('cart-total-val').innerText = formatPrice(subtotalINR);
+    document.querySelectorAll('[data-whatsapp]').forEach(function (element) {
+        element.setAttribute('href', url);
+        element.setAttribute('target', '_blank');
+        element.setAttribute('rel', 'noopener noreferrer');
+    });
+}
 
-            const remainingINR = Math.max(0, 2499 - subtotalINR);
-            const progressPercent = Math.min(100, (subtotalINR / 2499) * 100);
-            document.getElementById('shipping-progress-bar').style.width = `${progressPercent}%`;
+</script>
 
-            if (remainingINR === 0) {
-                document.getElementById('shipping-remaining-text').innerText = 'Unlocked!';
-                document.getElementById('shipping-progress-text').innerText = 'Complimentary Shipping Unlocked';
-            } else {
-                document.getElementById('shipping-remaining-text').innerText = `Add ${formatPrice(remainingINR)} more`;
-                document.getElementById('shipping-progress-text').innerText = 'Free Express Shipping';
-            }
-        }
-
-        function toggleCartDrawer(forceOpen = null) {
-            const drawer = document.getElementById('cart-drawer');
-            const content = document.getElementById('cart-content');
-            const isOpen = drawer.classList.contains('opacity-100');
-            if (forceOpen === true || (!isOpen && forceOpen === null)) {
-                drawer.classList.remove('pointer-events-none', 'opacity-0');
-                drawer.classList.add('opacity-100');
-                content.classList.remove('translate-x-full');
-            } else {
-                drawer.classList.add('pointer-events-none', 'opacity-0');
-                drawer.classList.remove('opacity-100');
-                content.classList.add('translate-x-full');
-            }
-        }
-
-        function toggleMobileNav() {
-            const drawer = document.getElementById('mobile-nav-drawer');
-            const content = document.getElementById('mobile-menu-content');
-            const isOpen = drawer.classList.contains('opacity-100');
-            if (!isOpen) {
-                drawer.classList.remove('pointer-events-none', 'opacity-0');
-                drawer.classList.add('opacity-100');
-                content.classList.remove('-translate-x-full');
-            } else {
-                drawer.classList.add('pointer-events-none', 'opacity-0');
-                drawer.classList.remove('opacity-100');
-                content.classList.add('-translate-x-full');
-            }
-        }
-
-        function openQuickViewModal(productId) {
-            const modal = document.getElementById('quickview-modal');
-            const container = document.getElementById('quickview-content');
-            const prod = PRODUCTS.find(p => p.id === productId) || PRODUCTS[0];
-
-            container.innerHTML = `
-                <div class="relative rounded-2xl overflow-hidden aspect-square border border-brand-gold/30">
-                    <img src="${prod.image}" class="w-full h-full object-cover" alt="${prod.name}">
-                </div>
-                <div class="space-y-4">
-                    <span class="text-[10px] font-mono text-brand-gold uppercase tracking-widest px-2.5 py-1 rounded bg-brand-gold/20 border border-brand-gold/30">${prod.badge}</span>
-                    <h3 class="font-serif text-2xl sm:text-3xl font-light text-brand-ivory">${prod.name}</h3>
-                    <p class="text-xs text-brand-cream/80 font-light leading-relaxed">${prod.desc}</p>
-                    <div class="font-serif text-2xl text-brand-gold font-semibold">${formatPrice(prod.priceINR)}</div>
-                    <div class="pt-2">
-                        <button onclick="addToCart('${prod.id}'); closeQuickViewModal();" class="w-full py-3.5 rounded-full bg-brand-gold text-brand-dark font-sans text-xs uppercase tracking-[0.2em] font-bold hover:bg-brand-cream transition-colors">
-                            Add to Bag
-                        </button>
-                    </div>
-                </div>
-            `;
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-        }
-
-        function closeQuickViewModal() {
-            document.getElementById('quickview-modal').classList.add('opacity-0', 'pointer-events-none');
-        }
-
-        function renderReviews(filter) {
-            const container = document.getElementById('reviews-container');
-            const filtered = filter === 'all' ? REVIEWS_DATA : REVIEWS_DATA.filter(r => r.type === filter);
-
-            container.innerHTML = filtered.map(r => `
-                <div class="glass-light p-5 sm:p-6 rounded-2xl space-y-4 border border-brand-earth/15 shadow-sm flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="flex text-brand-gold text-xs">
-                            ${'<i class="fa-solid fa-star"></i>'.repeat(r.stars)}
-                        </div>
-                        <p class="font-serif italic text-sm text-brand-dark leading-relaxed">"${r.quote}"</p>
-                    </div>
-                    <div class="flex items-center gap-3 pt-3 border-t border-brand-earth/10">
-                        <img src="${r.avatar}" class="w-10 h-10 rounded-full object-cover border border-brand-gold/40" alt="${r.name}">
-                        <div class="min-w-0">
-                            <h4 class="font-serif text-sm font-semibold text-brand-dark truncate">${r.name}</h4>
-                            <span class="text-[10px] font-mono text-brand-terracotta uppercase block truncate">${r.role}</span>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function filterReviews(type) {
-            renderReviews(type);
-        }
-
-        function openReviewModal() {
-            document.getElementById('review-modal').classList.remove('opacity-0', 'pointer-events-none');
-        }
-        function closeReviewModal() {
-            document.getElementById('review-modal').classList.add('opacity-0', 'pointer-events-none');
-        }
-
-        function submitReview(e) {
-            e.preventDefault();
-            const name = document.getElementById('rev-input-name').value;
-            const role = document.getElementById('rev-input-role').value;
-            const quote = document.getElementById('rev-input-quote').value;
-
-            REVIEWS_DATA.unshift({
-                id: Date.now(),
-                name: name,
-                role: role,
-                type: 'verified',
-                stars: 5,
-                quote: quote,
-                avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'
-            });
-
-            renderReviews('all');
-            closeReviewModal();
-            showToast('Thank you for your review!');
-        }
-
-        function openReelModal(index) {
-            const modal = document.getElementById('reel-modal');
-            const img = document.getElementById('reel-modal-img');
-            const tag = document.getElementById('reel-modal-tag');
-            const desc = document.getElementById('reel-modal-desc');
-
-            const reels = [
-                { img: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=600', tag: 'DARBHANGA HARVEST', desc: 'Diving into deep lotus wetlands under early dawn light to harvest mature seed pods.' },
-                { img: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=600', tag: 'WOOD-FIRED HEARTH', desc: 'The traditional clay hearth crackle as lotus seeds pop into white cloud bites.' },
-                { img: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&q=80&w=600', tag: 'TRUFFLE & GOLD', desc: 'Hand dusting Umbrian black truffle makhana with edible 24K gold leaves.' },
-                { img: 'https://images.unsplash.com/photo-1528733931641-f06b642a8b98?auto=format&fit=crop&q=80&w=600', tag: 'SILK-TOUCH CASK', desc: 'Hermetic seal testing to keep humidity levels at exactly 0.0% inside our tin casks.' }
-            ];
-
-            const item = reels[index - 1];
-            img.src = item.img;
-            tag.innerText = item.tag;
-            desc.innerText = item.desc;
-
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-        }
-
-        function closeReelModal() {
-            document.getElementById('reel-modal').classList.add('opacity-0', 'pointer-events-none');
-        }
-
-        /* WEB AUDIO API */
-        let audioCtx = null;
-        let isAudioPlaying = false;
-        let ambientOsc = null;
-        let gainNode = null;
-
-        function toggleAudioSoundscape() {
-            if (!isAudioPlaying) {
-                startLotusSoundscape();
-                document.getElementById('audio-icon').className = 'fa-solid fa-volume-high text-brand-gold';
-                document.getElementById('audio-label').innerText = 'Pond Audio ON';
-                showToast('Lotus Pond Soundscape Playing');
-                isAudioPlaying = true;
-            } else {
-                stopLotusSoundscape();
-                document.getElementById('audio-icon').className = 'fa-solid fa-volume-xmark';
-                document.getElementById('audio-label').innerText = 'Pond Audio';
-                showToast('Lotus Pond Soundscape Muted');
-                isAudioPlaying = false;
-            }
-        }
-
-        function startLotusSoundscape() {
-            try {
-                const AudioContext = window.AudioContext || window.webkitAudioContext;
-                audioCtx = new AudioContext();
-                ambientOsc = audioCtx.createOscillator();
-                gainNode = audioCtx.createGain();
-                ambientOsc.type = 'sine';
-                ambientOsc.frequency.setValueAtTime(108, audioCtx.currentTime);
-                gainNode.gain.setValueAtTime(0.05, audioCtx.currentTime);
-                ambientOsc.connect(gainNode);
-                gainNode.connect(audioCtx.destination);
-                ambientOsc.start();
-            } catch (e) {
-                console.warn('AudioContext could not start.', e);
-            }
-        }
-
-        function stopLotusSoundscape() {
-            if (gainNode && audioCtx) {
-                gainNode.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.5);
-                setTimeout(() => {
-                    if (ambientOsc) ambientOsc.stop();
-                    if (audioCtx) audioCtx.close();
-                }, 500);
-            }
-        }
-
-        function proceedToCheckout() {
-            if (cart.length === 0) {
-                showToast('Please add items to your bag first');
-                return;
-            }
-            showToast('Redirecting to MAKHANAM Private Checkout...');
-        }
-
-        function subscribeGazette(e) {
-            e.preventDefault();
-            showToast('Welcome to the MAKHANAM Privé Gazette');
-            e.target.reset();
-        }
-
-        /* TOAST UTILITY */
-        function showToast(message) {
-            const container = document.getElementById('toast-container');
-            const toast = document.createElement('div');
-            toast.className = 'glass-dark border border-brand-gold/40 text-brand-cream px-4 py-3 rounded-xl shadow-2xl text-[11px] sm:text-xs font-mono flex items-center gap-2 transform translate-y-4 opacity-0 transition-all duration-300 pointer-events-auto';
-            toast.innerHTML = `<span class="w-2 h-2 rounded-full bg-brand-gold shrink-0"></span><span>${message}</span>`;
-            container.appendChild(toast);
-            setTimeout(() => toast.classList.remove('translate-y-4', 'opacity-0'), 10);
-            setTimeout(() => {
-                toast.classList.add('translate-y-4', 'opacity-0');
-                setTimeout(() => toast.remove(), 300);
-            }, 3500);
-        }
-    </script>
 </body>
 </html>
